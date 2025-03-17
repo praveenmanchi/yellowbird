@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigation } from 'react-router';
 import praveenLogo from '../../assets/logo-thunderstorm-96.d1126ac.svg fill.svg';
 import './Header.css';
 import CaseStudiesHover from '../CaseStudiesHover/CaseStudiesHover';
@@ -8,46 +8,79 @@ import ResourceModal from '../ResourceModal/ResourceModal';
 const Header: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isResourceModalVisible, setIsResourceModalVisible] = useState(false);
+  const [activeLink, setActiveLink] = useState<string>('/');
+  // const navigate = useNavigation();
 
   const handleModal = () => {
-    if (isResourceModalVisible) {
-      setIsResourceModalVisible(false);
-    }
+    setIsResourceModalVisible(false);
     setIsModalVisible(!isModalVisible);
+    setActiveLink('#case-studies');
   };
 
   const handleResourceModal = () => {
-    if (isModalVisible) {
-      setIsModalVisible(false);
-    }
+    setIsModalVisible(false);
     setIsResourceModalVisible(!isResourceModalVisible);
+    setActiveLink('#resource');
   };
+
+  const handleLinkClick = (path: string) => {
+    setIsModalVisible(false);
+    setIsResourceModalVisible(false);
+    setActiveLink(path);
+  };
+
   return (
     <>
       <header className='header'>
         <div className='header-left'>
-          <Link to='/'>
+          <Link to='/' onClick={() => handleLinkClick('/')}>
             <img src={praveenLogo} alt='Praveen Manchi' />
           </Link>
         </div>
         <nav className='header-right'>
           <ul>
             <li>
-              <Link to='/about-me'>ABOUT ME</Link>
+              <Link
+                to='/about-me'
+                className={activeLink === '/about-me' ? 'active' : ''}
+                onClick={() => handleLinkClick('/about-me')}
+              >
+                ABOUT ME
+              </Link>
             </li>
             <li>
-              <Link to='#' onClick={handleModal}>
+              <Link
+                to='#'
+                onClick={handleModal}
+                className={activeLink === '#case-studies' ? 'active' : ''}
+              >
                 Case Studies
               </Link>
             </li>
             <li>
-              <Link to='/contact'>Contact</Link>
+              <Link
+                to='/contact'
+                className={activeLink === '/contact' ? 'active' : ''}
+                onClick={() => handleLinkClick('/contact')}
+              >
+                Contact
+              </Link>
             </li>
             <li>
-              <Link to='/blog'>Blog</Link>
+              <Link
+                to='/blog'
+                className={activeLink === '/blog' ? 'active' : ''}
+                onClick={() => handleLinkClick('/blog')}
+              >
+                Blog
+              </Link>
             </li>
             <li>
-              <Link to='#' onClick={handleResourceModal}>
+              <Link
+                to='#'
+                onClick={handleResourceModal}
+                className={activeLink === '#resource' ? 'active' : ''}
+              >
                 Resource
               </Link>
             </li>
