@@ -1,0 +1,37 @@
+.my-space-card{
+    border-top: 1px solid #3E4D60;
+    width: 322px;
+}
+.my-space-card__title{
+    font-size: 18px;
+    font-weight: 400;
+}
+.my-space-card__content{
+    /* background-color: #BDBBFF; */
+    height: 430px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.my-space-card__arrow-container{
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.my-space-card__description{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 12px;
+    opacity: 0.7;
+}

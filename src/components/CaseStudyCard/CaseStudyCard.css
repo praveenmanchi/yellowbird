@@ -1,0 +1,88 @@
+.case-study-card{
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    height: 528px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.case-study-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: inherit;
+}
+.case-study-title{
+    font-size: 10px;
+    font-weight: 400;
+    /* margin-bottom: 16px; */
+}
+.case-study-meta{
+    display: flex;
+    flex-direction: row;
+}
+/* .case-study-date{
+    font-size: 24px;
+    font-weight: 700;
+} */
+.case-study-date-header{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.case-study-date-desc {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 2px;
+    white-space: pre-wrap; /* Ensures text wraps to the next line */
+    word-wrap: break-word; /* Breaks long words to fit within the container */
+    margin-right: 14px;
+}
+
+.case-study-company{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.case-study-description{
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+.case-study-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+.case-study-info-item{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    gap: 46px;
+}
+.case-study-info-header{
+    font-size: 16px;
+    font-weight: 400;
+}
+.case-study-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.case-study-button{
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    border-radius: 4px;
+    background-color: #0049B8;
+    color: #ffffff;
+    border: none;
+    gap: 8px;
+    cursor: pointer;
+}
+.case-study-button:hover{
+    background-color: #073e96;
+}

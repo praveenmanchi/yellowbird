@@ -1,0 +1,39 @@
+.about-me-story {
+  display: flex;
+  flex-direction: column;
+}
+.about-me-story__image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  margin-left: 24px;
+}
+.about-me-story__title {
+  color: #f0f8ff;
+  font-family: Inter;
+  font-size: 30.031px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 133.195% */
+  letter-spacing: -1px;
+  margin-bottom: 21px;
+}
+.about-me-story__description {
+  color: #d4dce3;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 150% */
+  margin-bottom: 21px;
+}
+.about-me-story__inspiration {
+  color: #fff;
+  font-family: Inter;
+  font-size: 12.695px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 157.538% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

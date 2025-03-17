@@ -1,0 +1,22 @@
+.my-space-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.my-space-section__welcome{
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFB41F;
+    margin-bottom: 12px;
+}
+.my-space-section__headline{
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 0px;
+}
+.my-space-section__cards{
+    display: flex;
+    gap: 16px;
+}

@@ -1,0 +1,12 @@
+.case-studies-modal {
+  position: absolute;
+  top: 47px; /* Adjust based on your header height */
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+}

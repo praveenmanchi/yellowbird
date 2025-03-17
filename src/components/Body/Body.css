@@ -1,0 +1,46 @@
+.home-main-container {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  /* margin-top: 546px; */
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  /* max-width: 1200px; */
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.main-heading {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.business-section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.business-content {
+  margin-bottom: 20px;
+}
+
+.business-heading {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.business-description {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.featured-projects-section {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+.featured-projects-heading {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.featured-projects-description {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #F0F8FF;
+}

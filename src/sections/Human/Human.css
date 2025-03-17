@@ -1,0 +1,45 @@
+.human {
+  display: flex;
+  background-color: #ffffff;
+  justify-content: center;
+  gap: 118px;
+  padding: 88px;
+}
+.human-image {
+  width: 486px;
+  height: 759px;
+}
+.human-container {
+  display: flex;
+  flex-direction: column;
+}
+.human-title {
+  color: #3e4d60;
+  font-family: Inter;
+  font-size: 12.898px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 155.058% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.human-quote {
+  color: #000;
+  font-family: Inter;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 129.032% */
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+.human-description {
+  color: #000;
+  text-align: justify;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px; /* 160% */
+}

@@ -1,0 +1,91 @@
+.about-me {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 52px 88px 80px 88px;
+}
+.about-me-content {
+}
+.about-me-title {
+  color: #ffb41f;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.about-me-quote {
+  color: #fff;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 125% */
+  letter-spacing: -1px;
+}
+.about-me-description {
+  color: #d4dce3;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px; /* 200% */
+}
+.about-me-stats {
+  display: flex;
+}
+.about-me-experience {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 12px 5px 22px;
+  border-radius: 6px 0px 0px 6px;
+  border: 1px solid #121e31;
+}
+.experience-years {
+  color: #fff;
+  font-family: Inter;
+  font-size: 56.694px;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: -1.194px;
+}
+.experience-description {
+  color: #84929f;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+}
+.about-me-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 6px 6px 0px;
+  border: 1.194px solid #121e31;
+  padding: 8px 18px 5px 16px;
+  gap: 11px;
+}
+.projects-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.projects-description {
+  color: #84929f;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 300;
+}
+.about-me-logos {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+}
+.about-me-stories {
+  display: flex;
+  gap: 46px;
+  padding: 33px 90px 55px 90px;
+}
