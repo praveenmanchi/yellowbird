@@ -10,7 +10,6 @@ import Companies from '../../components/Companies/Companies';
 import Human from '../../sections/Human/Human';
 import AboutMeStory from '../../sections/AboutMeStory/AboutMeStory';
 import { cardData } from '../../constants/aboutMeConstants';
-import CaseStudiesHover from '../../components/CaseStudiesHover/CaseStudiesHover';
 
 const AboutMe: React.FC = () => {
   return (
@@ -77,7 +76,6 @@ const AboutMe: React.FC = () => {
           />
         ))}
       </div>
-      <CaseStudiesHover />
     </>
   );
 };

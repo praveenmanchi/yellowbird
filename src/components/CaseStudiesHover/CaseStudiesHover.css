@@ -1,5 +1,9 @@
+.case-studies-hover-container {
+  display: flex;
+}
+
 .case-studies-hover {
-  border-right: 2px solid #6c7574;
+  /* border-right: 2px solid #6c7574; */
   padding: 15px 14px 14px 33px;
   display: inline-block;
 }
@@ -44,4 +48,25 @@
   font-weight: 400;
   line-height: 28.8px; /* 160% */
   letter-spacing: -0.045px;
+}
+.recent-case-studies-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-left: 14px;
+  gap: 14px;
+}
+.recent-case-studies-title {
+  color: #6c7574;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.recent-case-studies {
+  display: flex;
+  gap: 24px;
 }

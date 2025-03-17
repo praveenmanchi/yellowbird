@@ -2,10 +2,11 @@ import React from 'react';
 // import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 import wArrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import './CaseStudiesHover.css';
+import CaseStudy from '../caseStudy/caseStudy';
 
 const CaseStudiesHover: React.FC = () => {
   return (
-    <div>
+    <div className='case-studies-hover-container'>
       <div className='case-studies-hover'>
         <span className='case-studies-title'>Case Studies</span>
         <div className='case-studies-item'>
@@ -46,8 +47,13 @@ const CaseStudiesHover: React.FC = () => {
           <img className='case-studies-button-arrow' src={wArrow} alt='arrow' />
         </button>
       </div>
-      <div>
-        <span>RecenT Case Studies</span>
+      <div className='recent-case-studies-container'>
+        <span className='recent-case-studies-title'>Recent Case Studies</span>
+        <div className='recent-case-studies'>
+          <CaseStudy />
+          <CaseStudy />
+          <CaseStudy />
+        </div>
       </div>
     </div>
   );

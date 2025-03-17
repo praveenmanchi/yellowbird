@@ -31,3 +31,23 @@
   color: #ffffff;
   opacity: 50%;
 }
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.case-studies-modal {
+  position: absolute;
+  background-color: #141415;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  animation: slideUp 0.1s ease-out;
+}

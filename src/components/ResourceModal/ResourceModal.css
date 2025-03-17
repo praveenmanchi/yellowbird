@@ -1,0 +1,21 @@
+.resource-modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+}
+.resource-modal-title {
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30.283px; /* 168.238% */
+  letter-spacing: -0.541px;
+}
+.resource-modal-description {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23.961px; /* 171.148% */
+}
