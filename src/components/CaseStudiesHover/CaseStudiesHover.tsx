@@ -2,7 +2,7 @@ import React from 'react';
 // import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 import wArrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import './CaseStudiesHover.css';
-import CaseStudy from '../caseStudy/caseStudy';
+import CaseStudy from '../caseStudy/casestudy';
 
 const CaseStudiesHover: React.FC = () => {
   return (
