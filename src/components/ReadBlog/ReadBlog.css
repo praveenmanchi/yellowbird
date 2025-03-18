@@ -14,4 +14,20 @@
   letter-spacing: 0.511px;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.read-blog-button:hover {
+  background: #003999;
+  transform: scale(1.05);
+}
+
+.read-blog-button:active {
+  transform: scale(0.95);
+}
+
+.hovered-img {
+  transform: rotate(10deg);
+  transition: transform 0.2s ease-in-out;
 }
