@@ -10,6 +10,7 @@ interface BlogMainCardProps {
     date: string;
     readTime: string;
     imgSrc: string;
+    link: string;
   };
 }
 
@@ -30,7 +31,7 @@ const BlogMainCard: React.FC<BlogMainCardProps> = ({ blog }) => {
             <Chip />
             <Chip />
           </div>
-  <ReadBlog link={blog.link} />
+<ReadBlog link={blog.link} />
         </div>
       </div>
     </div>

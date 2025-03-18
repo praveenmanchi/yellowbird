@@ -9,6 +9,7 @@ interface BlogSmCardProps {
     date: string;
     readTime: string;
     imgSrc: string;
+    link: string;
   };
 }
 
