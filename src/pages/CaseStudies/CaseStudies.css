@@ -80,3 +80,53 @@
   display: flex;
   gap: 16px;
 }
+.case-studies-header {
+  display: flex;
+  flex-direction: column;
+  max-width: 678px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@500&display=swap');
+
+.case-studies-header-creativity {
+  color: #fff;
+  font-family: 'Akshar', sans-serif;
+  font-size: 78.291px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 78.291px */
+  letter-spacing: -0.899px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.case-studies-header-divider {
+  display: flex;
+  justify-content: end;
+}
+.case-studies-header-purpose {
+  color: #fff;
+  font-family: 'Akshar', sans-serif;
+  font-size: 78.291px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 78.291px */
+  letter-spacing: -0.899px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-top: -150px;
+  margin-right: -80px;
+  margin-bottom: 58px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap');
+
+.with {
+  color: var(--neon, #b2ff50);
+  font-family: 'Abhaya Libre', serif;
+  font-size: 17.985px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 17.985px */
+  letter-spacing: 0.18px;
+  text-transform: uppercase;
+}

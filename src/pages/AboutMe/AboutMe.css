@@ -4,8 +4,9 @@
   gap: 40px;
   padding: 52px 88px 80px 88px;
 }
-.about-me-content {
-}
+
+.about-me-content {}
+
 .about-me-title {
   color: #ffb41f;
   font-family: Inter;
@@ -16,6 +17,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .about-me-quote {
   color: #fff;
   font-family: Inter;
@@ -25,6 +27,7 @@
   line-height: 60px; /* 125% */
   letter-spacing: -1px;
 }
+
 .about-me-description {
   color: #d4dce3;
   font-family: Inter;
@@ -33,9 +36,13 @@
   font-weight: 300;
   line-height: 32px; /* 200% */
 }
+
 .about-me-stats {
   display: flex;
+  width: 100%;
+  max-width: 759px;
 }
+
 .about-me-experience {
   display: flex;
   flex-direction: column;
@@ -43,6 +50,7 @@
   border-radius: 6px 0px 0px 6px;
   border: 1px solid #121e31;
 }
+
 .experience-years {
   color: #fff;
   font-family: Inter;
@@ -51,6 +59,7 @@
   font-weight: 900;
   letter-spacing: -1.194px;
 }
+
 .experience-description {
   color: #84929f;
   font-family: Inter;
@@ -58,6 +67,7 @@
   font-style: normal;
   font-weight: 300;
 }
+
 .about-me-projects {
   display: flex;
   justify-content: center;
@@ -67,23 +77,51 @@
   padding: 8px 18px 5px 16px;
   gap: 11px;
 }
+
 .projects-stats {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .projects-description {
   color: #84929f;
   font-family: Inter;
   font-size: 14px;
   font-weight: 300;
 }
+
+.about-me-logos-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding-top: 20px;
+}
+
 .about-me-logos {
   display: flex;
-  justify-content: flex-start;
   gap: 40px;
-  margin-top: 40px;
+  animation: scroll-logos 15s linear infinite;
+  width: 100%;
+  max-width: 759px;
 }
+
+@keyframes scroll-logos {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.about-me-logos img {
+  width: auto;
+  height: 50px; /* Adjust size as needed */
+}
+
 .about-me-stories {
   display: flex;
   gap: 46px;

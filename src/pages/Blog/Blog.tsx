@@ -3,6 +3,7 @@ import './Blog.css';
 import BlogMainCard from '../../components/BlogMainCard/BlogMainCard';
 import BlogSmCard from '../../components/BlogSmCard/BlogSmCard';
 import chipImg from '../../assets/blog/chip-img.png';
+
 import ReadBlog from '../../components/ReadBlog/ReadBlog';
 
 const blogsData = {
@@ -12,7 +13,7 @@ const blogsData = {
       description: "Explore the cognitive principles that make certain user interfaces intuitive and satisfying while others frustrate users. Learn how to apply psychological insights to create more engaging digital experiences.",
       date: "Nov 5, 2023",
       readTime: "8 min",
-      imgSrc: "../../assets/blog/ux-psychology.png",
+      imgSrc: "https://media.nngroup.com/static/img/banners/home-consulting_2x.webp",
       link: "https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false",
     },
     {
@@ -20,7 +21,7 @@ const blogsData = {
       description: "How leading companies create cohesive user experiences through well-structured design systems. Discover the key components and implementation strategies for scalable design frameworks.",
       date: "Jan 18, 2024",
       readTime: "6 min",
-      imgSrc: "../../assets/blog/design-systems.png",
+      imgSrc: "https://media.nngroup.com/static/img/banners/home-consulting_2x.webp",
       link: "https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false",
     },
   ],
@@ -29,28 +30,28 @@ const blogsData = {
       title: "Accessibility in UI Design: Creating Experiences for Everyone",
       date: "Feb 10, 2024",
       readTime: "5 min",
-      imgSrc: "../../assets/blog/accessibility-design.png",
+      imgSrc: "https://media.nngroup.com/static/img/banners/home-consulting_2x.webp",
       link: "https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false",
     },
     {
       title: "Micro-interactions: The Details That Define Great User Experiences",
       date: "Mar 15, 2024",
       readTime: "4 min",
-      imgSrc: "../../assets/blog/micro-interactions.png",
+      imgSrc: "https://media.nngroup.com/static/img/banners/home-consulting_2x.webp",
       link: "https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false",
     },
     {
       title: "Data Visualization in UX: Making Complex Information Accessible",
       date: "Jun 3, 2024",
       readTime: "6 min",
-      imgSrc: "../../assets/blog/data-viz-ux.png",
+      imgSrc: "https://media.nngroup.com/static/img/banners/home-consulting_2x.webp",
       link: "https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false",
     },
     {
       title: "Emotional Design: Creating Interfaces That Connect",
       date: "Jul 22, 2024",
       readTime: "5 min",
-      imgSrc: "../../assets/blog/emotional-design.png",
+      imgSrc: "https://media.nngroup.com/static/img/banners/home-consulting_2x.webp",
       link: "https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false",
     },
   ],
