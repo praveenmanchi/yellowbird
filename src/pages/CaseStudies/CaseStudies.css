@@ -1,0 +1,82 @@
+.case-studies-container {
+  padding: 42px 31px 214px 30px;
+}
+
+.case-studies-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  padding-bottom: 20px;
+}
+.case-studies-intro-text {
+  color: #b8c1cc;
+  font-family: Inter;
+  font-size: 19.375px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 36px; /* 185.806% */
+}
+.case-studies-design-process {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #14181f;
+  border-bottom: 1px solid #14181f;
+  margin-bottom: 22px;
+}
+.case-studies-process-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 0px 20px 0px;
+}
+.case-studies-process-title {
+  color: #f8fafc;
+  font-family: Inter;
+  font-size: 30.5px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px; /* 131.148% */
+  letter-spacing: -0.44px;
+}
+.case-studies-process-description {
+  color: #b8c1cc;
+  font-family: Inter;
+  font-size: 15.375px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 156.098% */
+}
+.case-studies-open-document-button {
+  width: 178.84px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #14191f;
+  color: #f8fafc;
+  font-family: Inter;
+  font-size: 17.438px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 137.634% */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.case-studies-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cs-chip-container-holder {
+  display: flex;
+  gap: 10px;
+}
+.cs-card-container {
+  margin-top: 50px;
+}
+.cs-horz-container {
+  display: flex;
+  gap: 16px;
+}

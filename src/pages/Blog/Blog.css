@@ -1,0 +1,73 @@
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 11px 36px 127px 30px;
+}
+.blog-title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 50.261px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50.261px; /* 100% */
+  letter-spacing: -1.257px;
+}
+.blog-description {
+  color: #b8c1cc;
+  font-family: Inter;
+  font-size: 19.375px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 36px; /* 185.806% */
+}
+.blog-sm-card-container {
+  display: flex;
+  gap: 36px;
+  margin-top: 60px;
+}
+.blog-main-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 60px;
+}
+.chip-img-container {
+  display: flex;
+  gap: 13px;
+  padding: 41px 35px 36px 30px;
+  background-color: #fff;
+  margin-top: 60px;
+}
+.chip-img-content {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+.chip-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chip-img-title {
+  color: #000;
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 60px; /* 100% */
+  letter-spacing: -1.5px;
+}
+.chip-img-subtitle {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17.5px; /* 109.375% */
+  letter-spacing: 0.35px;
+}
+.chip-img-read-blog {
+  display: flex;
+  justify-content: flex-end;
+}

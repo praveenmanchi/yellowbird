@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigation } from 'react-router';
+import React, { useState } from 'react';
+import { Link } from 'react-router';
 import praveenLogo from '../../assets/logo-thunderstorm-96.d1126ac.svg fill.svg';
 import './Header.css';
 import CaseStudiesHover from '../CaseStudiesHover/CaseStudiesHover';
@@ -9,7 +9,6 @@ const Header: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isResourceModalVisible, setIsResourceModalVisible] = useState(false);
   const [activeLink, setActiveLink] = useState<string>('/');
-  // const navigate = useNavigation();
 
   const handleModal = () => {
     setIsResourceModalVisible(false);
@@ -50,9 +49,9 @@ const Header: React.FC = () => {
             </li>
             <li>
               <Link
-                to='#'
+                to='/case-studies'
                 onClick={handleModal}
-                className={activeLink === '#case-studies' ? 'active' : ''}
+                className={activeLink === '/case-studies' ? 'active' : ''}
               >
                 Case Studies
               </Link>

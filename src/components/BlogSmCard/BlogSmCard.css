@@ -1,0 +1,23 @@
+.blog-sm-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.blog-sm-card-img {
+  border-radius: 3.327px 3.327px 0px 0px;
+}
+.blog-sm-card-title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 18.848px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18.848px; /* 100% */
+}
+.blog-sm-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 2px solid #121e31;
+}

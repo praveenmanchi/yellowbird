@@ -1,88 +1,118 @@
-.case-study-card{
-    border: 1px solid #ffffff;
-    border-radius: 8px;
-    height: 528px;
-    padding: 24px;
-    margin-bottom: 24px;
+.case-study-card {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  height: 528px;
+  /* padding: 24px; */
+  margin-bottom: 24px;
+  overflow: hidden;
 }
-.case-study-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: inherit;
+.case-study-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: inherit;
 }
-.case-study-title{
-    font-size: 10px;
-    font-weight: 400;
-    /* margin-bottom: 16px; */
+.case-study-content-exp {
+  display: flex;
+
+  align-items: flex-end;
+  height: inherit;
 }
-.case-study-meta{
-    display: flex;
-    flex-direction: row;
+.case-study-header {
+  padding: 24px;
+}
+.case-study-title {
+  color: #fcfaf8;
+  font-family: Inter;
+  font-size: 9.519px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12.374px; /* 130% */
+  /* margin-bottom: 16px; */
+}
+.case-study-meta {
+  display: flex;
+  flex-direction: row;
 }
 /* .case-study-date{
     font-size: 24px;
     font-weight: 700;
 } */
-.case-study-date-header{
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 2px;
+.case-study-details {
+  padding: 24px;
+}
+.case-study-date-header {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 2px;
 }
 .case-study-date-desc {
-    font-size: 12px;
-    font-weight: 400;
-    margin-top: 2px;
-    white-space: pre-wrap; /* Ensures text wraps to the next line */
-    word-wrap: break-word; /* Breaks long words to fit within the container */
-    margin-right: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 2px;
+  white-space: pre-wrap; /* Ensures text wraps to the next line */
+  word-wrap: break-word; /* Breaks long words to fit within the container */
+  margin-right: 14px;
 }
 
-.case-study-company{
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 0px;
+.case-study-company {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0px;
 }
-.case-study-description{
-    font-size: 34px;
-    font-weight: 700;
-    margin-top: 8px;
+.case-study-description {
+  font-size: 34px;
+  font-weight: 700;
+  margin-top: 8px;
 }
-.case-study-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 0px;
+.case-study-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0px;
 }
-.case-study-info-item{
-    display: flex;
-    flex-direction: row;
-    margin: 0px;
-    gap: 46px;
+.case-study-info-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  gap: 26px;
 }
-.case-study-info-header{
-    font-size: 16px;
-    font-weight: 400;
+.case-study-info-header {
+  color: #fff;
+  font-family: Inter;
+  font-size: 13.9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21.898px; /* 157.538% */
+  letter-spacing: 1.095px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
-.case-study-button-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.case-study-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.case-study-button{
-    height: 48px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 16px;
-    border-radius: 4px;
-    background-color: #0049B8;
-    color: #ffffff;
-    border: none;
-    gap: 8px;
-    cursor: pointer;
+.case-study-button {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  border-radius: 4px;
+  background-color: #0049b8;
+  color: #ffffff;
+  border: none;
+  gap: 8px;
+  cursor: pointer;
 }
-.case-study-button:hover{
-    background-color: #073e96;
+.case-study-button:hover {
+  background-color: #073e96;
+}
+.case-study-logo {
+  width: 24.045px;
+  height: 24.045px;
 }

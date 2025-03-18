@@ -1,0 +1,39 @@
+.blog-main-card {
+  display: flex;
+  gap: 36px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #121e31;
+}
+.blog-main-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.blog-main-card-title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 50.261px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50.261px; /* 100% */
+  letter-spacing: -1.257px;
+}
+.blog-main-card-description {
+  color: #b8c1cc;
+  text-align: justify;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.324px; /* 130.888% */
+  letter-spacing: 0.366px;
+}
+.blog-main-card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-main-card-chips {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
