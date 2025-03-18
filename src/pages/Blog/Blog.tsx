@@ -85,7 +85,7 @@ const Blog: React.FC = () => {
             <p className='chip-img-subtitle'>{blogsData.chipContent.subtitle}</p>
           </div>
           <div className='chip-img-read-blog'>
-            <ReadBlog />
+          <ReadBlog link={blogsData.chipContent.link} />
           </div>
         </div>
       </div>

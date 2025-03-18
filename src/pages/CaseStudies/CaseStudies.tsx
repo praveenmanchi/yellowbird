@@ -3,7 +3,7 @@ import './CaseStudies.css';
 import arrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import CsChip from '../../components/CsChip/CsChip';
 import { csChipData } from '../../constants/csConstants';
-import FeaturedProjectsSection from '../../sections/FeaturedProjectsSection/FeaturedProjectsSection';
+// import FeaturedProjectsSection from '../../sections/FeaturedProjectsSection/FeaturedProjectsSection';
 import CaseStudyCard from '../../components/CaseStudyCard/CaseStudyCard';
 
 const CaseStudies: React.FC = () => {
