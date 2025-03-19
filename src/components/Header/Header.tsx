@@ -30,7 +30,13 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className='header'>
+      <header
+        className={`header ${
+          activeLink === '#case-studies' || activeLink === '#resource'
+            ? 'white-bg'
+            : ''
+        }`}
+      >
         <div className='header-left'>
           <Link to='/' onClick={() => handleLinkClick('/')}>
             <img src={praveenLogo} alt='Praveen Manchi' />
@@ -51,7 +57,7 @@ const Header: React.FC = () => {
               <Link
                 to='/case-studies'
                 onClick={handleModal}
-                className={activeLink === '/case-studies' ? 'active' : ''}
+                className={activeLink === '#case-studies' ? 'active' : ''}
               >
                 Case Studies
               </Link>
