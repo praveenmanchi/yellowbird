@@ -1,7 +1,6 @@
 .case-study-comp {
-  width: 342px;
-  padding: 0px 0px 19px 0px;
-  /* border-right: 2px solid #6c7574; */
+  padding: 0px 14px 19px 0px;
+  border-right: 2px solid #f3f3f3;
 }
 .case-study-comp-header {
   display: flex;
@@ -13,20 +12,22 @@
   margin-bottom: 12px;
 }
 .case-study-comp-title {
-  color: hsla(0, 0%, 100%, 0.5);
-  font-size: 12px;
-  display: inline;
   margin-bottom: 12px;
+  color: #002b31;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
 }
 .case-study-comp-description {
-  color: #ffffff;
+  color: #002b31;
   font-family: Inter;
-  font-size: 18px !important;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 400 !important;
+  font-weight: 400;
   line-height: 21px; /* 116.667% */
   letter-spacing: -0.045px;
-  margin-bottom: 12px;
 }
 .case-study-comp-date {
   color: hsla(0, 0%, 100%, 0.5);
@@ -59,5 +60,26 @@
   gap: 8px;
   padding-right: 14px;
   padding-top: 12px;
-  /* border-top: 2px solid #6c7574; */
+  border-top: 2px solid #ebeceb;
+  color: #002b31;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px; /* 180% */
+  letter-spacing: -0.045px;
+}
+.date {
+  color: #1d2a29a6;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+.time {
+  color: #002b31;
 }

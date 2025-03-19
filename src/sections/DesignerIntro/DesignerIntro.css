@@ -13,6 +13,9 @@
   flex-direction: column;
   padding: 200px 40px;
   font-family: 'Magellot Demo', sans-serif;
+  background-image: url('../../assets/grids-bg.svg');
+  background-size: cover;
+  background-position: center;
 }
 
 .designer-intro__greeting {

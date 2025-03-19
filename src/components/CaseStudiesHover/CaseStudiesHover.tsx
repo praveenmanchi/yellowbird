@@ -1,5 +1,5 @@
 import React from 'react';
-// import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
+import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 import wArrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import './CaseStudiesHover.css';
 import CaseStudy from '../caseStudy/caseStudy';
@@ -16,25 +16,24 @@ const CaseStudiesHover: React.FC = () => {
           >
             DESIGN SYSTEMS
           </span>
-          <img className='case-studies-item-arrow' src={wArrow} alt='wArrow' />
+          <img className='case-studies-item-arrow' src={arrow} alt='arrow' />
         </div>
         <div className='case-studies-item'>
           <span className='case-studies-item-title'>PRODUCT DESIGN</span>
-          <img className='case-studies-item-arrow' src={wArrow} alt='wArrow' />
+          <img className='case-studies-item-arrow' src={arrow} alt='arrow' />
         </div>
         <div className='case-studies-item'>
           <span className='case-studies-item-title'>UX RESEARCH</span>
-          <img className='case-studies-item-arrow' src={wArrow} alt='wArrow' />
+          <img className='case-studies-item-arrow' src={arrow} alt='arrow' />
         </div>
-        <button className='case-studies-button' style={{ marginTop: '40px' }}>
-          <span className='case-studies-button-text'>
+        <button
+          className='case-studies-button nda-case'
+          style={{ marginTop: '40px' }}
+        >
+          <span className='case-studies-button-text nda-text'>
             View NDA Case Studies
           </span>
-          <img
-            className='case-studies-button-arrow'
-            src={wArrow}
-            alt='wArrow'
-          />
+          <img className='case-studies-button-arrow' src={arrow} alt='arrow' />
         </button>
         <button className='case-studies-button'>
           <span className='case-studies-button-text'>My Design Process </span>

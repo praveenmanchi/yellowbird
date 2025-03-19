@@ -1,7 +1,7 @@
 import React from 'react';
 import cs from '../../assets/caseStudiesModal/cs.png';
 import './CaseStudy.css';
-import arrow from '../../assets/caseStudiesModal/white-arrow.svg';
+import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 
 const CaseStudy: React.FC = () => {
   return (
@@ -12,9 +12,9 @@ const CaseStudy: React.FC = () => {
         <span className='case-study-comp-description'>
           Q3 Releases & Product Updates Q3 Releases & Product Updates
         </span>
-        <div className='case-study-comp-date'>
+        <div className='case-study-comp-date date'>
           Nov 12, 2024 —
-          <span className='case-study-comp-read-time'>7 min read </span>
+          <span className='case-study-comp-read-time time'>7 min read </span>
         </div>
       </div>
       <div className='case-study-comp-footer'>
