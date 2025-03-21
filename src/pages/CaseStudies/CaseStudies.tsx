@@ -3,7 +3,7 @@ import './CaseStudies.css';
 import arrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import CsChip from '../../components/CsChip/CsChip';
 import { csChipData } from '../../constants/csConstants';
-import CaseStudyCard from '../../components/CaseStudyCard/CaseStudyCard';
+import CasestudyCard from '../../components/CasestudyCard/CasestudyCard';
 import circle from '../../assets/circle.svg';
 
 const CaseStudies: React.FC = () => {
@@ -63,12 +63,12 @@ const CaseStudies: React.FC = () => {
         </div>
       </div>
       <div className='cs-card-container'>
-        <CaseStudyCard />
+        <CasestudyCard />
         <div className='cs-horz-container'>
-          <CaseStudyCard expertise={true} />
-          <CaseStudyCard expertise={true} />
+          <CasestudyCard expertise={true} />
+          <CasestudyCard expertise={true} />
         </div>
-        <CaseStudyCard />
+        <CasestudyCard />
       </div>
     </div>
   );

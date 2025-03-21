@@ -4,6 +4,7 @@ import { createHtmlPlugin } from "vite-plugin-html";
 import sitemap from "vite-plugin-sitemap";
 
 export default defineConfig({
+  publicDir: "public", // Ensure public/ is copied to dist/
   plugins: [
     react(),
     createHtmlPlugin({
