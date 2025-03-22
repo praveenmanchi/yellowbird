@@ -2,7 +2,7 @@ import React from 'react';
 import './FeaturedProjectsSection.css';
 import arrow from '../../assets/forward-arrow.svg';
 
-import CaseStudyCard from '../../components/CaseStudyCard/CaseStudyCard';
+import CasestudyCard from '../../components/CasestudyCard/CasestudyCard';
 
 const FeaturedProjectsSection: React.FC = () => {
   return (
@@ -13,8 +13,8 @@ const FeaturedProjectsSection: React.FC = () => {
         place where I can share my thoughts and my journey as a product designer
         in this industry.
       </p>
-      <CaseStudyCard microTool={true} caseStudy={true} />
-      <CaseStudyCard microTool={true} caseStudy={true} />
+      <CasestudyCard microTool={true} Casestudy={true} />
+      <CasestudyCard microTool={true} Casestudy={true} />
       <div className='case-study-read-more-btn-container'>
         <div className='case-study-button-container'>
           <button className='case-study-button'>

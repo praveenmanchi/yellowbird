@@ -1,31 +1,29 @@
 import React from 'react';
 import './BlogMainCard.css';
-import blogImg from '../../assets/blog/blog-main-card.png';
 import Chip from '../Chip/Chip';
 import ReadBlog from '../ReadBlog/ReadBlog';
 
-const BlogMainCard: React.FC = () => {
+interface BlogMainCardProps {
+  blog: {
+    title: string;
+    description: string;
+    date: string;
+    readTime: string;
+    imgSrc: string;
+    link: string;
+  };
+}
+
+const BlogMainCard: React.FC<BlogMainCardProps> = ({ blog }) => {
   return (
     <div className='blog-main-card'>
-      <img src={blogImg} alt='blog' className='blog-main-card-img' />
+      <img src={blog.imgSrc} alt='blog' className='blog-main-card-img' />
       <div className='blog-main-card-content'>
-        <span className='blog-main-card-title'>
-          How the Internet Archive’s “Free Digital Library” fell to the “fair
-          use” test
-        </span>
-        <span className='blog-main-card-description'>
-          People need to anticipate the revolution that’s coming in how humans
-          and AI willthat’s coming in how humans and AI willthat’s coming in how
-          humans and AI willthat’s coming in how humans and AI willthat’s coming
-          in how humans and AI willthat’s coming in how humans and AI willthat’s
-          coming in how humans and AI will People need to anticipate the
-          revolution that’s coming in how humans and AI willthat’s coming in how
-          humans and AI willthat’s coming in how humans and AI willthat’s coming
-          in
-        </span>
+        <h2 className='blog-main-card-title'>{blog.title}</h2>
+        <p className='blog-main-card-description'>{blog.description}</p>
         <div className='case-study-comp-date'>
-          Nov 12, 2024 —
-          <span className='case-study-comp-read-time'>7 min read </span>
+          {blog.date} —
+          <span className='case-study-comp-read-time'>{blog.readTime}</span>
         </div>
         <div className='blog-main-card-footer'>
           <div className='blog-main-card-chips'>
@@ -33,7 +31,7 @@ const BlogMainCard: React.FC = () => {
             <Chip />
             <Chip />
           </div>
-          <ReadBlog />
+<ReadBlog link={blog.link} />
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import cs from '../../assets/caseStudiesModal/cs.png';
-import './CaseStudy.css';
+import './Casestudy.css';
 import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 
-const CaseStudy: React.FC = () => {
+const Casestudy: React.FC = () => {
   return (
     <div className='case-study-comp'>
       <div className='case-study-comp-header'>
@@ -25,4 +25,4 @@ const CaseStudy: React.FC = () => {
   );
 };
 
-export default CaseStudy;
+export default Casestudy;

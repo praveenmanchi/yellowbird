@@ -2,7 +2,7 @@ import React from 'react';
 import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 import wArrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import './CaseStudiesHover.css';
-import CaseStudy from '../caseStudy/caseStudy';
+import Casestudy from '../Casestudy/Casestudy';
 
 const CaseStudiesHover: React.FC = () => {
   return (
@@ -49,9 +49,9 @@ const CaseStudiesHover: React.FC = () => {
       <div className='recent-case-studies-container'>
         <span className='recent-case-studies-title'>Recent Case Studies</span>
         <div className='recent-case-studies'>
-          <CaseStudy />
-          <CaseStudy />
-          <CaseStudy />
+          <Casestudy />
+          <Casestudy />
+          <Casestudy />
         </div>
       </div>
     </div>
