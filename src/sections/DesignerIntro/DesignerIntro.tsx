@@ -37,7 +37,7 @@ const DesignerIntro: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div className='designer-main-container'>
       <div className='designer-intro'>
         <span className='designer-intro__greeting'>Hello there,</span>
         <span className='designer-intro__description'>
@@ -81,7 +81,7 @@ const DesignerIntro: React.FC = () => {
         <img src={ar4} alt='' />
         <img src={text4} alt='' />
       </div>
-    </>
+    </div>
   );
 };
 

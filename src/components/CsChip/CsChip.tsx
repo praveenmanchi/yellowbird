@@ -3,6 +3,7 @@ import './CsChip.css';
 interface Props {
   label: string;
   count: number;
+  onClick?: () => void;
 }
 
 const CsChip: React.FC<Props> = ({ label, count }: Props) => {

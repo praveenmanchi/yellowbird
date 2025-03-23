@@ -8,16 +8,20 @@
 }
 
 /* Apply the font family to the relevant classes */
+.designer-main-container {
+  padding: 40px;
+}
 .designer-intro {
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: 90vh;
   justify-content: center;
   padding: 0px 40px;
   font-family: 'Magellot Demo', sans-serif;
   background-image: url('../../assets/grids-bg.svg');
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .designer-intro__greeting {
@@ -79,8 +83,8 @@
 }
 .ar-txt-3 {
   position: absolute;
-  top: 648px;
-  right: 52%;
+  bottom: 2%;
+  left: 563px;
 }
 .ar-txt-4 {
   position: absolute;
