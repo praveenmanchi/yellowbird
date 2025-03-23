@@ -91,4 +91,5 @@
   display: flex;
   justify-content: center;
   animation: slideDown 0.1s ease-out;
+  z-index: 10;
 }

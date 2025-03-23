@@ -2,9 +2,14 @@ import React from 'react';
 import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 import wArrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import './CaseStudiesHover.css';
-import Casestudy from '../Casestudy/Casestudy';
+import { Link } from 'react-router';
+import CaseStudy from '../Casestudy/Casestudy';
 
-const CaseStudiesHover: React.FC = () => {
+interface Props {
+  setIsModalVisible: (value: boolean) => void;
+}
+
+const CaseStudiesHover: React.FC<Props> = ({ setIsModalVisible }: Props) => {
   return (
     <div className='case-studies-hover-container'>
       <div className='case-studies-hover'>
@@ -41,7 +46,14 @@ const CaseStudiesHover: React.FC = () => {
         </button>
         <button className='case-studies-button'>
           <span className='case-studies-button-text'>
-            View All Case Studies
+            <Link
+              to='/case-studies'
+              className='case-studies-button-text'
+              style={{ textDecoration: 'none' }}
+              onClick={() => setIsModalVisible(false)}
+            >
+              View All Case Studies
+            </Link>
           </span>
           <img className='case-studies-button-arrow' src={wArrow} alt='arrow' />
         </button>
@@ -49,9 +61,9 @@ const CaseStudiesHover: React.FC = () => {
       <div className='recent-case-studies-container'>
         <span className='recent-case-studies-title'>Recent Case Studies</span>
         <div className='recent-case-studies'>
-          <Casestudy />
-          <Casestudy />
-          <Casestudy />
+          <CaseStudy />
+          <CaseStudy />
+          <CaseStudy />
         </div>
       </div>
     </div>
