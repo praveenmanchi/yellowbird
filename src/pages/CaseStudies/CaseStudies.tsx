@@ -3,7 +3,7 @@ import './CaseStudies.css';
 import arrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import CsChip from '../../components/CsChip/CsChip';
 import { csChipData } from '../../constants/csConstants';
-import CasestudyCard from '../../components/CasestudyCard/CasestudyCard';
+import CasestudyCard from '../../components/casestudyCard/casestudyCard';
 import circle from '../../assets/circle.svg';
 import csLg from '../../assets/caseStudies/cs-bg-lg.png';
 import csSm from '../../assets/caseStudies/cs-bg-sm.png';

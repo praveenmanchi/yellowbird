@@ -3,7 +3,7 @@ import './FeaturedProjectsSection.css';
 import arrow from '../../assets/forward-arrow.svg';
 import csLg from '../../assets/caseStudies/cs-bg-lg.png';
 
-import CasestudyCard from '../../components/casestudyCard/CaseStudyCard';
+import CasestudyCard from '../../components/casestudyCard/casestudyCard';
 
 const FeaturedProjectsSection: React.FC = () => {
   return (

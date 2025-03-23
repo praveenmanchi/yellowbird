@@ -3,7 +3,7 @@ import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 import wArrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import './CaseStudiesHover.css';
 import { Link } from 'react-router';
-import CaseStudy from '../Casestudy/Casestudy';
+import CaseStudy from '../casestudy/casestudy';
 
 interface Props {
   setIsModalVisible: (value: boolean) => void;

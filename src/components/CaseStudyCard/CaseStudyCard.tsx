@@ -2,7 +2,7 @@ import React from 'react';
 import arrow from '../../assets/forward-arrow.svg';
 import figmaLogo from '../../assets/figma.svg';
 import tool from '../../assets/micro-tool.svg';
-import './CasestudyCard.css';
+import './casestudyCard.css';
 
 interface Props {
   expertise?: boolean;

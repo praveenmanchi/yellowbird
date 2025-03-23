@@ -11,10 +11,8 @@ export default defineConfig({
       inject: {
         data: {
           title: "Praveen Manchi - UX/UI Designer",
-          description:
-            "Explore my portfolio showcasing innovative UX/UI design solutions in AI, IoT, and emerging technologies.",
-          keywords:
-            "UX Design, UI Design, Product Design, Web Development, AI, IoT, UX Engineer, Portfolio",
+          description: "Explore my portfolio showcasing innovative UX/UI design solutions in AI, IoT, and emerging technologies.",
+          keywords: "UX Design, UI Design, Product Design, Web Development, AI, IoT, UX Engineer, Portfolio",
           favicon: "/favicon.ico",
           ogImage: "https://praveen-manchi.com/og-image.jpg",
           ogUrl: "https://praveen-manchi.com",
@@ -23,15 +21,7 @@ export default defineConfig({
     }),
     sitemap({
       hostname: "https://praveen-manchi.com",
-      generateRobotsTxt: true, // Ensures robots.txt is created
-      robotsTxtOptions: {
-        policies: [
-          {
-            userAgent: "*",
-            allow: "/",
-          },
-        ],
-      },
+      generateRobotsTxt: true, // Explicitly enable robots.txt generation
     }),
   ],
 });
