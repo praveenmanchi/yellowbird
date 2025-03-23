@@ -5,6 +5,8 @@ import CsChip from '../../components/CsChip/CsChip';
 import { csChipData } from '../../constants/csConstants';
 import CasestudyCard from '../../components/CasestudyCard/CasestudyCard';
 import circle from '../../assets/circle.svg';
+import csLg from '../../assets/caseStudies/cs-bg-lg.png';
+import csSm from '../../assets/caseStudies/cs-bg-sm.png';
 
 const CaseStudies: React.FC = () => {
   // const [selectedChips, setSelectedChips] = useState(['web app']);
@@ -74,12 +76,12 @@ const CaseStudies: React.FC = () => {
         </div>
       </div>
       <div className='cs-card-container'>
-        <CasestudyCard />
+        <CasestudyCard img={csLg} />
         <div className='cs-horz-container'>
-          <CasestudyCard expertise={true} />
-          <CasestudyCard expertise={true} />
+          <CasestudyCard expertise={true} img={csSm} />
+          <CasestudyCard expertise={true} img={csSm} />
         </div>
-        <CasestudyCard />
+        <CasestudyCard img={csLg} />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import './FeaturedProjectsSection.css';
 import arrow from '../../assets/forward-arrow.svg';
+import csLg from '../../assets/caseStudies/cs-bg-lg.png';
 
 import CasestudyCard from '../../components/CasestudyCard/CasestudyCard';
 
@@ -13,8 +14,8 @@ const FeaturedProjectsSection: React.FC = () => {
         place where I can share my thoughts and my journey as a product designer
         in this industry.
       </p>
-      <CasestudyCard microTool={true} Casestudy={true} />
-      <CasestudyCard microTool={true} Casestudy={true} />
+      <CasestudyCard microTool={true} Casestudy={false} img={csLg} />
+      <CasestudyCard microTool={true} Casestudy={false} img={csLg} />
       <div className='case-study-read-more-btn-container'>
         <div className='case-study-button-container'>
           <button className='case-study-button'>
