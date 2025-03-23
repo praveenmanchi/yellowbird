@@ -23,6 +23,15 @@ export default defineConfig({
     }),
     sitemap({
       hostname: "https://praveen-manchi.com",
+      generateRobotsTxt: true, // Ensures robots.txt is created
+      robotsTxtOptions: {
+        policies: [
+          {
+            userAgent: "*",
+            allow: "/",
+          },
+        ],
+      },
     }),
   ],
 });
