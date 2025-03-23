@@ -1,0 +1,8 @@
+.page-transition-container {
+    width: 100%;
+    min-height: calc(100vh - 200px);
+    opacity: 0;
+    position: relative;
+    will-change: opacity, transform;
+    overflow: hidden;
+  }

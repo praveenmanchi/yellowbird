@@ -84,12 +84,26 @@
 } */
 
 /* Case Studies & Resource modal */
+/* Add to your Header.css or create a separate CSS file */
 .case-studies-modal {
   position: absolute;
   background-color: #ffffff;
   width: 100%;
   display: flex;
   justify-content: center;
-  animation: slideDown 0.1s ease-out;
   z-index: 10;
+  transform-origin: top center;
+  animation: slideDown 0.3s ease-out forwards;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

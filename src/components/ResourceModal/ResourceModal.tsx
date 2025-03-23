@@ -1,5 +1,5 @@
 import React from 'react';
-import Casestudy from '../Casestudy/Casestudy';
+import Casestudy from '../casestudy/casestudy';
 import './ResourceModal.css';
 
 const ResourceModal: React.FC = () => {
