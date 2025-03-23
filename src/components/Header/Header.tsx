@@ -32,7 +32,9 @@ const Header: React.FC = () => {
     <>
       <header
         className={`header ${
-          activeLink === '#case-studies' || activeLink === '#resource'
+          ((activeLink === '#case-studies' || activeLink === '#resource') &&
+            isModalVisible) ||
+          isResourceModalVisible
             ? 'white-bg'
             : ''
         }`}
@@ -55,7 +57,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <Link
-                to='/case-studies'
+                to='#'
                 onClick={handleModal}
                 className={activeLink === '#case-studies' ? 'active' : ''}
               >
@@ -94,7 +96,7 @@ const Header: React.FC = () => {
       </header>
       {isModalVisible && (
         <div className='case-studies-modal'>
-          <CaseStudiesHover />
+          <CaseStudiesHover setIsModalVisible={setIsModalVisible} />
         </div>
       )}
       {isResourceModalVisible && (

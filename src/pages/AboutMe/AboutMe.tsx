@@ -4,6 +4,8 @@ import ge from '../../assets/aboutMe/ge.svg.svg';
 import tatamotors from '../../assets/aboutMe/tatamotors.svg.svg';
 import deloitte from '../../assets/aboutMe/deloitte.svg.svg';
 import honda from '../../assets/aboutMe/honda.svg.svg';
+import cortexai from '../../assets/aboutMe/cortexai.svg';
+import sonyliv from '../../assets/aboutMe/sonyliv.svg';
 
 import './AboutMe.css';
 import Companies from '../../components/Companies/Companies';
@@ -52,13 +54,25 @@ const AboutMe: React.FC = () => {
               </span>
             </div>
           </div>
-          <div className='about-me-logos'>
-            <img src={baxter} alt='baxter' />
-            <img src={ge} alt='ge' />
-            <img src={tatamotors} alt='tatamotors' />
-            <img src={deloitte} alt='deloitte' />
-            <img src={honda} alt='honda' />
-          </div>
+          <div className="about-me-logos-container">
+  <div className="about-me-logos">
+    <img src={baxter} alt="baxter" />
+    <img src={ge} alt="ge" />
+    <img src={tatamotors} alt="tatamotors" />
+    <img src={deloitte} alt="deloitte" />
+    <img src={honda} alt="honda" />
+    <img src={cortexai} alt="cortexai" />
+    <img src={sonyliv} alt="sonyliv" />
+    {/* Duplicate for seamless looping */}
+    <img src={baxter} alt="baxter" />
+    <img src={ge} alt="ge" />
+    <img src={tatamotors} alt="tatamotors" />
+    <img src={deloitte} alt="deloitte" />
+    <img src={honda} alt="honda" />
+    <img src={cortexai} alt="cortexai" />
+    <img src={sonyliv} alt="sonyliv" />
+  </div>
+</div>
         </div>
         <div>
           <Companies />

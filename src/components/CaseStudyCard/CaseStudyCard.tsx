@@ -2,24 +2,24 @@ import React from 'react';
 import arrow from '../../assets/forward-arrow.svg';
 import figmaLogo from '../../assets/figma.svg';
 import tool from '../../assets/micro-tool.svg';
-import './CaseStudyCard.css';
+import './CasestudyCard.css';
 
 interface Props {
   expertise?: boolean;
   microTool?: boolean;
-  caseStudy?: boolean;
+  Casestudy?: boolean;
 }
 
-const CaseStudyCard: React.FC<Props> = ({
+const CasestudyCard: React.FC<Props> = ({
   expertise,
   microTool,
-  caseStudy,
+  Casestudy,
 }: Props) => {
   return (
     <div
       className='case-study-card'
       style={{
-        background: caseStudy
+        background: Casestudy
           ? 'linear-gradient(to bottom, gray, black)'
           : 'gray',
       }}
@@ -48,7 +48,7 @@ const CaseStudyCard: React.FC<Props> = ({
         )}
         <div
           className='case-study-details'
-          style={{ backgroundColor: caseStudy ? '' : 'black' }}
+          style={{ backgroundColor: Casestudy ? '' : 'black' }}
         >
           <h5 className='case-study-company'>Abu Dhabi Executive Office</h5>
           <h2 className='case-study-description'>
@@ -89,4 +89,4 @@ const CaseStudyCard: React.FC<Props> = ({
   );
 };
 
-export default CaseStudyCard;
+export default CasestudyCard;

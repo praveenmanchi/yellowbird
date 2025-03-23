@@ -1,6 +1,6 @@
 import React from 'react';
 import cs from '../../assets/caseStudiesModal/cs.png';
-import './CaseStudy.css';
+import './Casestudy.css';
 import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 
 const CaseStudy: React.FC = () => {

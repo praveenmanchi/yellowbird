@@ -3,10 +3,20 @@ import './CaseStudies.css';
 import arrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import CsChip from '../../components/CsChip/CsChip';
 import { csChipData } from '../../constants/csConstants';
-import CaseStudyCard from '../../components/CaseStudyCard/CaseStudyCard';
+import CasestudyCard from '../../components/CasestudyCard/CasestudyCard';
 import circle from '../../assets/circle.svg';
 
 const CaseStudies: React.FC = () => {
+  // const [selectedChips, setSelectedChips] = useState(['web app']);
+
+  // const handleChipSelect = (chipLabel: string) => {
+  //   console.log(chipLabel);
+  //   setSelectedChips((prevSelected: any) =>
+  //     prevSelected.includes(chipLabel)
+  //       ? prevSelected.filter((label) => label !== chipLabel)
+  //       : [...prevSelected, chipLabel]
+  //   );
+  // };
   return (
     <div className='case-studies-container'>
       <div className='case-studies-header'>
@@ -58,17 +68,18 @@ const CaseStudies: React.FC = () => {
               label={eachChip?.label}
               count={eachChip?.number}
               key={idx}
+              // onClick={() => handleChipSelect(eachChip.label)}
             />
           ))}
         </div>
       </div>
       <div className='cs-card-container'>
-        <CaseStudyCard />
+        <CasestudyCard />
         <div className='cs-horz-container'>
-          <CaseStudyCard expertise={true} />
-          <CaseStudyCard expertise={true} />
+          <CasestudyCard expertise={true} />
+          <CasestudyCard expertise={true} />
         </div>
-        <CaseStudyCard />
+        <CasestudyCard />
       </div>
     </div>
   );
