@@ -22,7 +22,7 @@ const App: React.FC = () => {
   return (
     <div style={{ margin: '0' }}>
       {!hideHeaderFooter && <Header />}
-      <PageTransition type='slide' duration={0.7}>
+      <PageTransition type='blur' duration={0.7}>
         <Routes>
           <Route path='/' element={<Body />} />
           <Route path='/aboutme' element={<AboutMe />} />

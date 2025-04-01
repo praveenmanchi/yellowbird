@@ -34,21 +34,31 @@
 }
 .chip-img-container {
   display: flex;
-  gap: 13px;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
   padding: 41px 35px 36px 30px;
   background-color: #fff;
   margin-top: 60px;
+  border-radius: 12px;
+  flex-wrap: wrap; /* ensures responsiveness */
 }
-.chip-img-content {
-  display: flex;
-  flex-direction: column;
-  gap: 38px;
+
+.chip-img {
+  width: 45%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
+
 .chip-img-overlay {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
+  min-width: 280px;
 }
+
 .chip-img-title {
   color: #000;
   font-family: Inter;
@@ -72,3 +82,13 @@
   justify-content: flex-end;
 }
 
+@media (max-width: 768px) {
+  .chip-img-container {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .chip-img {
+    width: 100%;
+  }
+}
