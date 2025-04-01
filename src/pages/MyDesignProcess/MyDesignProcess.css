@@ -1,0 +1,29 @@
+.design-process {
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
+  padding: 30px;
+}
+.design-process-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 19px;
+}
+.design-process-title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 50.261px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50.261px; /* 100% */
+  letter-spacing: -1.257px;
+}
+.design-process-description {
+  color: #b8c1cc;
+  font-family: Inter;
+  font-size: 19.375px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 36px; /* 185.806% */
+}

@@ -1,24 +1,90 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CaseStudies.css';
 import arrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import CsChip from '../../components/CsChip/CsChip';
 import { csChipData } from '../../constants/csConstants';
-import CasestudyCard from '../../components/casestudyCard/casestudyCard';
 import circle from '../../assets/circle.svg';
-import csLg from '../../assets/caseStudies/cs-bg-lg.png';
-import csSm from '../../assets/caseStudies/cs-bg-sm.png';
+import CaseStudyCardNew from '../../components/CaseStudyCardNew/CaseStudyCardNew';
+import { Link } from 'react-router';
+import { caseStudyCardDataDummy } from '../../constants/caseStudyDummyData';
+
+interface CaseStudy {
+  title: string;
+  description: string;
+  imgSrc: string;
+  pathName: string;
+}
+
+interface CaseStudyCategory {
+  caseStudyLg?: CaseStudy[];
+  caseStudySm?: CaseStudy[];
+  caseStudyXs?: CaseStudy[];
+}
+
+interface CaseStudyData {
+  [key: string]: CaseStudyCategory;
+}
 
 const CaseStudies: React.FC = () => {
-  // const [selectedChips, setSelectedChips] = useState(['web app']);
+  const [selectedChips, setSelectedChips] = useState(['All']);
+  const [activeChips, setActiveChips] = useState<string[]>(['All']);
 
-  // const handleChipSelect = (chipLabel: string) => {
-  //   console.log(chipLabel);
-  //   setSelectedChips((prevSelected: any) =>
-  //     prevSelected.includes(chipLabel)
-  //       ? prevSelected.filter((label) => label !== chipLabel)
-  //       : [...prevSelected, chipLabel]
-  //   );
-  // };
+  const handleChipSelect = (chipLabel: string) => {
+    if (chipLabel === 'All') {
+      if (activeChips.includes('All')) {
+        setActiveChips([]);
+        setSelectedChips([]);
+      } else {
+        const allLabels = csChipData.map((chip) => chip.label);
+        setActiveChips(allLabels);
+        setSelectedChips(allLabels);
+      }
+    } else {
+      setActiveChips((prevActive) => {
+        const newActive = prevActive.includes(chipLabel)
+          ? prevActive.filter((label) => label !== chipLabel)
+          : [...prevActive, chipLabel];
+
+        return newActive.includes('All')
+          ? newActive.filter((c) => c !== 'All')
+          : newActive;
+      });
+
+      setSelectedChips((prevSelected) => {
+        const newSelected = prevSelected.includes(chipLabel)
+          ? prevSelected.filter((label) => label !== chipLabel)
+          : [...prevSelected, chipLabel];
+
+        return newSelected.includes('All')
+          ? newSelected.filter((c) => c !== 'All')
+          : newSelected;
+      });
+    }
+  };
+
+  const filteredData = caseStudyCardDataDummy.filter((item) => {
+    const key = Object.keys(item)[0];
+    return selectedChips.some(
+      (chip) => chip.toLowerCase() === key.toLowerCase()
+    );
+  });
+
+  const extractCaseStudies = (
+    data: CaseStudyData[],
+    type: keyof CaseStudyCategory
+  ): CaseStudy[] => {
+    const allStudies = data.flatMap((appCategory) =>
+      Object.values(appCategory).flatMap((app) => app[type] ?? [])
+    );
+    return Array.from(new Set(allStudies.map((cs) => JSON.stringify(cs)))).map(
+      (cs) => JSON.parse(cs)
+    );
+  };
+
+  const caseStudyLg = extractCaseStudies(filteredData, 'caseStudyLg');
+  const caseStudySm = extractCaseStudies(filteredData, 'caseStudySm');
+  const caseStudyXs = extractCaseStudies(filteredData, 'caseStudyXs');
+
   return (
     <div className='case-studies-container'>
       <div className='case-studies-header'>
@@ -54,13 +120,15 @@ const CaseStudies: React.FC = () => {
             My design process varies slightly depending on the nature of the
             project at hand. Am I redesigning an existing product, creating a
             new product from scratch, adding new features to an already existing
-            product
+            product.
           </span>
         </div>
-        <button className='case-studies-open-document-button'>
-          Open Document
-          <img src={arrow} alt='arrow' />
-        </button>
+        <Link to='/designprocess' style={{ textDecoration: 'none' }}>
+          <button className='case-studies-open-document-button'>
+            Open Document
+            <img src={arrow} alt='arrow' />
+          </button>
+        </Link>
       </div>
       <div className='case-studies-footer'>
         <span className='case-studies-footer-text'>// Casestudies</span>
@@ -70,18 +138,26 @@ const CaseStudies: React.FC = () => {
               label={eachChip?.label}
               count={eachChip?.number}
               key={idx}
-              // onClick={() => handleChipSelect(eachChip.label)}
+              handleChipSelect={handleChipSelect}
+              chipActive={activeChips.includes(eachChip?.label)}
             />
           ))}
         </div>
       </div>
       <div className='cs-card-container'>
-        <CasestudyCard img={csLg} />
+        {caseStudyLg.map((card, idx) => (
+          <CaseStudyCardNew key={idx} data={card} />
+        ))}
         <div className='cs-horz-container'>
-          <CasestudyCard expertise={true} img={csSm} />
-          <CasestudyCard expertise={true} img={csSm} />
+          {caseStudySm?.map((card, idx) => (
+            <CaseStudyCardNew key={idx} data={card} />
+          ))}
         </div>
-        <CasestudyCard img={csLg} />
+        <div className='cs-horz-container'>
+          {caseStudyXs?.map((card, idx) => (
+            <CaseStudyCardNew key={idx} data={card} />
+          ))}
+        </div>
       </div>
     </div>
   );

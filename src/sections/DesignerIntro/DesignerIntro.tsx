@@ -69,14 +69,14 @@ const DesignerIntro: React.FC = () => {
         <img src={ar1} alt='' />
         <img src={text1} alt='' />
       </div>
-      <div className='ar-txt-2'>
+      {/* <div className='ar-txt-2'>
         <img src={ar2} alt='' />
         <img src={text2} alt='' />
-      </div>
-      <div className='ar-txt-3'>
+      </div> */}
+      {/* <div className='ar-txt-3'>
         <img src={ar3} alt='' />
         <img src={text3} alt='' />
-      </div>
+      </div> */}
       <div className='ar-txt-4'>
         <img src={ar4} alt='' />
         <img src={text4} alt='' />

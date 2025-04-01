@@ -1,0 +1,10 @@
+.case-study-home-position-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.case-study-header-home {
+  padding: 24px;
+}

@@ -11,13 +11,19 @@ interface BlogMainCardProps {
     readTime: string;
     imgSrc: string;
     link: string;
+    chipLabel?: string;
   };
 }
 
 const BlogMainCard: React.FC<BlogMainCardProps> = ({ blog }) => {
   return (
     <div className='blog-main-card'>
-      <img src={blog.imgSrc} alt='blog' className='blog-main-card-img' />
+      <img
+        src={blog.imgSrc}
+        alt='blog'
+        className='blog-main-card-img'
+        style={{ width: '1200px', height: '347px', objectFit: 'cover' }}
+      />
       <div className='blog-main-card-content'>
         <h2 className='blog-main-card-title'>{blog.title}</h2>
         <p className='blog-main-card-description'>{blog.description}</p>
@@ -27,11 +33,11 @@ const BlogMainCard: React.FC<BlogMainCardProps> = ({ blog }) => {
         </div>
         <div className='blog-main-card-footer'>
           <div className='blog-main-card-chips'>
-            <Chip />
-            <Chip />
-            <Chip />
+            <Chip label={blog?.chipLabel} />
+            {/* <Chip />
+            <Chip /> */}
           </div>
-<ReadBlog link={blog.link} />
+          <ReadBlog link={blog.link} />
         </div>
       </div>
     </div>

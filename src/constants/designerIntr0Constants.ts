@@ -5,7 +5,7 @@ export const tabs = [
     beforeHighlighter: "I'm",
     highlighter: 'Praveen Manchi',
     description:
-      'designer who cares about making beautiful things that help people.',
+      'who cares about making beautiful & meaninful things which can use by all people.',
   },
   {
     id: 'Recruiters',
@@ -13,7 +13,7 @@ export const tabs = [
     beforeHighlighter: "I'm a",
     highlighter: 'Product designer',
     description:
-      'with 15 years of experience across brand and product, at companies',
+      'with 6.8+ years of experience fully in UX/UI across HCI & HMI.',
   },
   {
     id: 'Design Directors',
@@ -44,6 +44,6 @@ export const tabs = [
     highlighter: '{highly_technical}',
     middler: 'and while',
     endHighlighter: "(I'm ≠ engineer)",
-    description: 'I know my way / around & can speak "fluently".',
+    description: 'But I know my way / around & can speak "fluently".',
   },
 ];

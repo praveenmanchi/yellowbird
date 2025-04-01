@@ -10,6 +10,7 @@ interface BlogSmCardProps {
     readTime: string;
     imgSrc: string;
     link: string;
+    chipLabel?: string;
   };
 }
 
@@ -23,8 +24,8 @@ const BlogSmCard: React.FC<BlogSmCardProps> = ({ blog }) => {
         <span className='case-study-comp-read-time'>{blog.readTime}</span>
       </div>
       <div className='blog-sm-card-footer'>
-        <Chip />
-<ReadBlog link={blog.link} />
+        <Chip label={blog?.chipLabel} />
+        <ReadBlog link={blog.link} />
       </div>
     </div>
   );

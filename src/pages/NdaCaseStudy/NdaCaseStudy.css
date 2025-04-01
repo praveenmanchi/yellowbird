@@ -1,0 +1,115 @@
+.nda-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+.nda-warning-title {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px; /* 125% */
+  text-transform: uppercase;
+}
+.nda-warning-text {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.nda-warning-text-1 {
+  margin-top: 16px;
+}
+.nda-access-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.nda-access-text {
+  color: #605d64;
+  text-align: center;
+  font-family: Inter;
+  font-size: 17.156px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px; /* 157.377% */
+  margin-top: 71px;
+}
+.nda-input-container {
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: #fff;
+  width: 400px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 8px;
+}
+.nda-password-input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.nda-unlock-button {
+  border-radius: 8px;
+  background: #0049b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15.875px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 11.5px 0px 10.5px 0px;
+  gap: 6.23px;
+  cursor: pointer;
+}
+.nda-return-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #000;
+  font-family: Inter;
+  font-size: 13.781px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.nda-return-button:hover {
+  font-size: 14.781px;
+}
+.error-message {
+  color: #f00;
+  text-align: center;
+  font-family: Inter;
+  font-size: 17.156px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px; /* 157.377% */
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.nda-input-container.error {
+  border-color: #f00;
+}

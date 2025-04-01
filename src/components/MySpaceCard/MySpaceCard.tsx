@@ -1,12 +1,14 @@
 import React from 'react';
 import arrow from '../../assets/my-space-arrow.svg';
 import './MySpaceCard.css';
+import { Link } from 'react-router';
 
 interface Card {
   title: string;
   backgroundColor: string;
   image: string;
   description: string;
+  link: string;
 }
 
 interface Props {
@@ -22,9 +24,11 @@ const MySpaceCard: React.FC<Props> = ({ card }) => {
         style={{ backgroundColor: card.backgroundColor }}
       >
         <img className='my-space-card__image' src={card.image} alt='' />
-        <div className='my-space-card__arrow-container'>
-          <img className='my-space-card__arrow' src={arrow} alt='' />
-        </div>
+        <Link to={card?.link}>
+          <div className='my-space-card__arrow-container'>
+            <img className='my-space-card__arrow' src={arrow} alt='' />
+          </div>
+        </Link>
       </div>
       <p className='my-space-card__description'>{card.description}</p>
     </div>

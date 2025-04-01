@@ -1,26 +1,30 @@
 export const csChipData = [
   {
+    label: 'All',
+    number: 8,
+  },
+  {
     label: 'Web App',
     number: 3,
   },
   {
     label: 'Mobile App',
-    number: 3,
+    number: 1,
   },
   {
     label: 'HMI Design',
-    number: 3,
+    number: 2,
   },
   {
     label: 'Design System',
-    number: 3,
+    number: 0,
   },
   {
     label: 'Heuristic Evaluation',
-    number: 95,
+    number: 1,
   },
   {
     label: 'Usability Testing',
-    number: 1,
+    number: 0,
   },
 ];

@@ -6,6 +6,9 @@ import deloitte from '../../assets/aboutMe/deloitte.svg.svg';
 import honda from '../../assets/aboutMe/honda.svg.svg';
 import cortexai from '../../assets/aboutMe/cortexai.svg';
 import sonyliv from '../../assets/aboutMe/sonyliv.svg';
+import barclays from '../../assets/aboutMe/barclays.svg';
+import tataadavnce from '../../assets/aboutMe/tataadavance.svg';
+
 
 import './AboutMe.css';
 import Companies from '../../components/Companies/Companies';
@@ -21,8 +24,11 @@ const AboutMe: React.FC = () => {
           <span className='about-me-title'>How and Where I work(ed)</span>
           <h1 className='about-me-quote'>
             "I Do Everything With Passion To Bring Life & Designing cool UI
-            screens is my super Power. Don't tell to anyone it's a secret"
+            screens is my super Power."
           </h1>
+          <p className='about-me-description'>
+            Don't tell to anyone it's a secret
+          </p>
           <p className='about-me-description'>
             Started from the original problem(s) and make sure we try to tackle
             the correct one(s) is essential to make sure we provide efficient
@@ -30,7 +36,7 @@ const AboutMe: React.FC = () => {
           </p>
           <div className='about-me-stats'>
             <div className='about-me-experience'>
-              <span className='experience-years'>6.6 +</span>
+              <span className='experience-years'>6.8 +</span>
               <span
                 className='experience-description'
                 style={{ width: '208px' }}
@@ -41,16 +47,19 @@ const AboutMe: React.FC = () => {
             <div className='about-me-projects'>
               <div className='projects-stats'>
                 <span className='experience-years' style={{ width: '128px' }}>
-                  99 +
+                  99+
                 </span>
                 <span className='experience-description'>
                   Delivered Projects
                 </span>
               </div>
               <span className='projects-description'>
-                Industries where I had the chance to help users and companies
-                with Source:cinema, bank, finance, industries where I had the
-                chance to help users and companies with{' '}
+              I have driven the design for web, mobile, HCI and HMI with exceptional quality
+across projects for esteemed clients who are into renewable energy, automobile, aviation. As a
+collaborative project’s lead some-time and individual contributor has enabled me to work on two major
+OTT platforms, leveraging cutting-edge UI enhancements rooted in extensive UX research. I ensured a
+comprehensive understanding of user needs, forging strong client relationships and aligning design
+strategies.
               </span>
             </div>
           </div>
@@ -63,6 +72,8 @@ const AboutMe: React.FC = () => {
     <img src={honda} alt="honda" />
     <img src={cortexai} alt="cortexai" />
     <img src={sonyliv} alt="sonyliv" />
+    <img src={barclays} alt="barclays" />
+    <img src={tataadavnce} alt="tataadavnce" />
     {/* Duplicate for seamless looping */}
     <img src={baxter} alt="baxter" />
     <img src={ge} alt="ge" />
@@ -71,6 +82,8 @@ const AboutMe: React.FC = () => {
     <img src={honda} alt="honda" />
     <img src={cortexai} alt="cortexai" />
     <img src={sonyliv} alt="sonyliv" />
+    <img src={barclays} alt="barclays" />
+    <img src={tataadavnce} alt="tataadavnce" />
   </div>
 </div>
         </div>
@@ -79,7 +92,7 @@ const AboutMe: React.FC = () => {
         </div>
       </div>
       <Human />
-      <div className='about-me-stories'>
+      {/* <div className='about-me-stories'>
         {cardData.map((data, index) => (
           <AboutMeStory
             key={index}
@@ -89,7 +102,7 @@ const AboutMe: React.FC = () => {
             image={data.image}
           />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

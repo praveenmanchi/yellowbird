@@ -35,12 +35,12 @@ const Footer: React.FC = () => {
               </Link>
             </li>
             <li className='footer__link-item'>
-              <Link to='/about-me' className='footer__link'>
+              <Link to='/aboutme' className='footer__link'>
                 ABOUT
               </Link>
             </li>
             <li className='footer__link-item'>
-              <Link to='/case-studies' className='footer__link'>
+              <Link to='/casestudies' className='footer__link'>
                 Case Studies
               </Link>
             </li>
@@ -59,12 +59,12 @@ const Footer: React.FC = () => {
               </Link>
             </li>
             <li className='footer__link-item'>
-              <Link to='/about-me' className='footer__link'>
+              <Link to='/aboutme' className='footer__link'>
                 ABOUT ME
               </Link>
             </li>
             <li className='footer__link-item'>
-              <Link to='/case-studies' className='footer__link'>
+              <Link to='/casestudies' className='footer__link'>
                 Case Studies
               </Link>
             </li>
@@ -75,29 +75,44 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-        <footer className="footer__empty-section">
-  <nav className="footer__empty-section-icons">
-    {[
-      { src: gitIcon, alt: "GitHub", link: "https://github.com/praveenmanchi" },
-      { src: figmaIcon, alt: "Figma", link: "https://www.figma.com/@praveenmanchi" },
-      { src: noteIcon, alt: "Notion", link: "https://www.notion.so/praveenmanchi" },
-      { src: linkedinIcon, alt: "LinkedIn", link: "https://www.linkedin.com/in/praveenmanchi" }
-    ].map((icon, index) => (
-      <a 
-        key={index} 
-        href={icon.link} 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <img src={icon.src} alt={icon.alt} className="footer__logo" />
-      </a>
-    ))}
-  </nav>
-  <span className="footer__empty-section-text">
-    © 2024 Praveen Manchi. All Rights Reserved.
-  </span>
-</footer>
-
+        <footer className='footer__empty-section'>
+          <nav className='footer__empty-section-icons'>
+            {[
+              {
+                src: gitIcon,
+                alt: 'GitHub',
+                link: 'https://github.com/praveenmanchi',
+              },
+              {
+                src: figmaIcon,
+                alt: 'Figma',
+                link: 'https://www.figma.com/@praveenmanchi',
+              },
+              {
+                src: noteIcon,
+                alt: 'Notion',
+                link: 'https://www.notion.so/praveenmanchi',
+              },
+              {
+                src: linkedinIcon,
+                alt: 'LinkedIn',
+                link: 'https://www.linkedin.com/in/praveenmanchi',
+              },
+            ].map((icon, index) => (
+              <a
+                key={index}
+                href={icon.link}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img src={icon.src} alt={icon.alt} className='footer__logo' />
+              </a>
+            ))}
+          </nav>
+          <span className='footer__empty-section-text'>
+            © 2024 Praveen Manchi. All Rights Reserved.
+          </span>
+        </footer>
       </div>
       <div className='footer__bottom-logo'>
         <img
