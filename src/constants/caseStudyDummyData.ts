@@ -24,7 +24,6 @@ export const caseStudyCardDataDummy = [
           client: 'Benz',
           tools: '8 min',
           imgSrc: benzbanner,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
           pathName: 'bestornothing',
         },
         {
@@ -40,7 +39,6 @@ export const caseStudyCardDataDummy = [
           client: 'NDA',
           tools: '8 min',
           imgSrc: nobroker,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
           pathName: 'nobroker',
         },
         {
@@ -56,7 +54,7 @@ export const caseStudyCardDataDummy = [
           client: 'Payu',
           tools: '8 min',
           imgSrc: paysafe,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'paysafe',
         },
         {
@@ -72,7 +70,7 @@ export const caseStudyCardDataDummy = [
           client: 'Cisco',
           tools: '8 min',
           imgSrc: cisco,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'ciscofoods',
         },
         {
@@ -88,7 +86,7 @@ export const caseStudyCardDataDummy = [
           client: 'cortext AI',
           tools: '8 min',
           imgSrc: benzbanner,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'cortexAi',
           lock: true,
         },
@@ -103,23 +101,9 @@ export const caseStudyCardDataDummy = [
           client: 'TATA ELxsi',
           tools: '8 min',
           imgSrc: cluster,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'instrumentcluster',
         },
-        {
-          insight: false,
-          title: 'Abc Re-Designing',
-          description:
-            'ABC Limited has a BI Big Data Analytics Suite of digital applications. With that application they will track & monitor Analytics for manufacturing unit. We need re-redesign page is an existing Ul screen for one of the app. Study this screen and redesign it for a user.',
-          position: 'Assignment',
-          client: 'ABC',
-          tools: '8 min',
-          imgSrc: abb,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
-          pathName: 'abc',
-        },
-      ],
-      caseStudyXs: [
         {
           insight: false,
           title: 'Inflight Entertainment System',
@@ -129,8 +113,23 @@ export const caseStudyCardDataDummy = [
           client: 'NDA',
           tools: '8 min',
           imgSrc: flight,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'infoentertainment',
+        },
+        
+      ],
+      caseStudyXs: [
+        {
+          insight: false,
+          title: 'Abc Re-Designing',
+          description:
+            'ABC Limited has a BI Big Data Analytics Suite of digital applications. With that application they will track & monitor Analytics for manufacturing unit. We need re-redesign page is an existing Ul screen for one of the app. Study this screen and redesign it for a user.',
+          position: 'Assignment',
+          client: 'ABC',
+          tools: '8 min',
+          imgSrc: abb,
+
+          pathName: 'abc',
         },
         {
           insight: false,
@@ -141,7 +140,7 @@ export const caseStudyCardDataDummy = [
           client: 'Mue-zero',
           tools: '8 min',
           imgSrc: lms,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'lms',
         },
       ],
@@ -163,7 +162,7 @@ export const caseStudyCardDataDummy = [
           client: 'NDA',
           tools: '8 min',
           imgSrc: nobroker,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'nobroker',
         },
         {
@@ -179,7 +178,7 @@ export const caseStudyCardDataDummy = [
           client: 'Payu',
           tools: '8 min',
           imgSrc: paysafe,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'paysafe',
         },
         {
@@ -195,7 +194,7 @@ export const caseStudyCardDataDummy = [
           client: 'Cisco',
           tools: '8 min',
           imgSrc: cisco,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'ciscofoods',
         },
       ],
@@ -217,7 +216,7 @@ export const caseStudyCardDataDummy = [
           client: 'Benz',
           tools: '8 min',
           imgSrc: benzbanner,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'bestornothing',
         },
       ],
@@ -235,7 +234,7 @@ export const caseStudyCardDataDummy = [
           client: 'TATA ELxsi',
           tools: '8 min',
           imgSrc: cluster,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'instrumentcluster',
         },
         {
@@ -247,7 +246,7 @@ export const caseStudyCardDataDummy = [
           client: 'ABC',
           tools: '8 min',
           imgSrc: abb,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'abc',
         },
       ],
@@ -274,7 +273,7 @@ export const caseStudyCardDataDummy = [
           client: 'NDA',
           tools: '8 min',
           imgSrc: nobroker,
-          link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
+
           pathName: 'nobroker',
         },
       ],

@@ -46,10 +46,22 @@ import cisco4 from '../../assets/caseStudyImages/cisco/home-4.png';
 import cisco5 from '../../assets/caseStudyImages/cisco/home-5.png';
 import cisco6 from '../../assets/caseStudyImages/cisco/home-6.png';
 
+import LMS1 from '../../assets/caseStudyImages/mue-zero/mue-1-min.jpeg';
+import LMS2 from '../../assets/caseStudyImages/mue-zero/mue22.png';
 
+import car1 from '../../assets/caseStudyImages/Instrumentcluster/innns.png';
+import car2 from '../../assets/caseStudyImages/Instrumentcluster/instrument cluster .jpg';
+// import car3 from '../../assets/caseStudyImages/Instrumentcluster/instrument cluster_small.png';
 
+import abc1 from '../../assets/caseStudyImages/abc/abc-1.png';
+import abc2 from '../../assets/caseStudyImages/abc/abc-2.png';
+import abc3 from '../../assets/caseStudyImages/abc/abc-3.png';
+import abc4 from '../../assets/caseStudyImages/abc/abc-4.png';
+// import abc5 from '../../assets/caseStudyImages/abc/group2.png';
 
-
+import flightbanner from '../../assets/caseStudyImages/informatica/air-1.png';
+// import flight2 from '../../assets/caseStudyImages/informatica/air-2.png';
+import flight3 from '../../assets/caseStudyImages/informatica/airfull.png';
 
 const caseStudies = {
   bestornothing: [
@@ -321,43 +333,45 @@ const caseStudies = {
   lms: [
     {
       template: 'image',
-      imgSrc: benzImg1,
+      imgSrc: LMS2,
     },
     {
       template: 'content',
-      title: 'AMG Driving Academy Case Study',
+      title: 'Learning management system',
       description:
-        'A deep dive into the user experience design process for AMG Driving Academy, including research, wireframing, and UI prototyping.',
+        'Created UI for learning management system is a software application for the administration, documentation, tracking, reporting, automation, and delivery of educational courses, training programs, materials or learning and development programs. The learning management system concept emerged directly from e-Learning',
       category: 'Web App',
-      client: 'Benz',
+      client: 'Mue-Zero',
       tools: [figma, xd, sketch, invision],
       published: '01-04-2025',
     },
     {
       template: 'image',
-      imgSrc: benzImg1,
+      imgSrc: LMS1,
     },
   ],
+
   instrumentcluster: [
     {
       template: 'image',
-      imgSrc: benzImg1,
+      imgSrc: car1,
     },
     {
       template: 'content',
-      title: 'AMG Driving Academy Case Study',
+      title: 'Car Instrument Cluster',
       description:
-        'A deep dive into the user experience design process for AMG Driving Academy, including research, wireframing, and UI prototyping.',
+        'A UI for cars instrument cluster houses the various displays and indicators that enable a driver to operate the vehicle. Among these are several gauges – often a speedometer, odometer, tachometer, oil pressure gauge, fuel gauge, etc. – as well as various indicators for system malfunctions and warnings.',
       category: 'Web App',
-      client: 'Benz',
+      client: 'Tata Motors',
       tools: [figma, xd, sketch, invision],
       published: '01-04-2025',
     },
     {
       template: 'image',
-      imgSrc: benzImg1,
+      imgSrc: car2,
     },
   ],
+
   abc: [
     {
       template: 'image',
@@ -365,38 +379,74 @@ const caseStudies = {
     },
     {
       template: 'content',
-      title: 'AMG Driving Academy Case Study',
+      title: 'Big Data Analytics Suite',
       description:
-        'A deep dive into the user experience design process for AMG Driving Academy, including research, wireframing, and UI prototyping.',
+        'ABC Limited has a BI Big Data Analytics Suite of digital applications. With that application they will track & monitor Analytics for manufacturing unit. We need re-redesign page is an existing Ul screen for one of the app. Study this screen and redesign it for a user.',
       category: 'Web App',
-      client: 'Benz',
+      client: 'ABC',
       tools: [figma, xd, sketch, invision],
       published: '01-04-2025',
     },
     {
       template: 'image',
-      imgSrc: benzImg1,
+      imgSrc: abc1,
     },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://miro.com/app/live-embed/uXjVO1zGS5k=/?moveToViewport=-559,-1573,7508,9772',
+    },
+    {
+      template: 'image',
+      imgSrc: abc2,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://miro.com/app/live-embed/uXjVO1zGS5k=/?moveToViewport=-559,-1573,7508,9772',
+    },
+    {
+      template: 'image',
+      imgSrc: abc3,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://miro.com/app/live-embed/uXjVO1zGS5k=/?moveToViewport=-559,-1573,7508,9772',
+    },
+    {
+      template: 'image',
+      imgSrc: abc4,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://xd.adobe.com/embed/9977cdad-88d5-40e9-b08f-8a58ccc156cf-cc24/',
+    },
+
+  
   ],
+
   infoentertainment: [
     {
       template: 'image',
-      imgSrc: benzImg1,
+      imgSrc: flightbanner,
     },
     {
       template: 'content',
-      title: 'AMG Driving Academy Case Study',
+      title: 'Inflight Entertainment System',
       description:
-        'A deep dive into the user experience design process for AMG Driving Academy, including research, wireframing, and UI prototyping.',
+        'In-flight entertainment (IFE) systems are designed to enrich the passenger experience and streamline the onboard experience. IFE systems can include: Moving-map systems: Display a map of the planes position and direction, Audio entertainment: Includes music, news, information, and comedy, Video entertainment: Includes personal televisions (PTVs) and larger video screens, Games: Includes video games that can be networked for interactive playing, In-flight magazines: Provide details about the airline fleet, as well as articles about destinations, travel, and tourism information.',
       category: 'Web App',
-      client: 'Benz',
+      client: 'NDA',
       tools: [figma, xd, sketch, invision],
       published: '01-04-2025',
     },
     {
       template: 'image',
-      imgSrc: benzImg1,
+      imgSrc: flight3,
     },
+    
   ],
 };
 
