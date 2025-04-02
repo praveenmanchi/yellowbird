@@ -14,13 +14,13 @@ export default defineConfig({
           description: "Explore my portfolio showcasing innovative UX/UI design solutions in AI, IoT, and emerging technologies.",
           keywords: "UX Design, UI Design, Product Design, Web Development, AI, IoT, UX Engineer, Portfolio",
           favicon: "/favicon.ico",
-          ogImage: "https://praveen-manchi.com/og-image.jpg",
-          ogUrl: "https://praveen-manchi.com",
+          ogImage: "https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png",
+          ogUrl: "https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png",
         },
       },
     }),
     sitemap({
-      hostname: "https://praveen-manchi.com",
+      hostname: "https://www.praveenmanchi.art/",
       generateRobotsTxt: true, // Explicitly enable robots.txt generation
     }),
   ],
