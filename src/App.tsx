@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router';
+import { usePostHog } from 'posthog-js/react';
+
 import Header from './components/Header/Header';
 import Body from './components/Body/Body';
 import Footer from './components/Footer/Footer';
@@ -16,9 +18,16 @@ import Passcode from './pages/Passcode/Passcode';
 
 const App: React.FC = () => {
   const location = useLocation();
+  const posthog = usePostHog();
+
+  // ✅ Track pageviews on route change
+  useEffect(() => {
+    posthog?.capture('$pageview');
+  }, [location, posthog]);
+
   const hideHeaderFooter =
-    location.pathname === '/ndacasestudies' ||
-    location.pathname === '/passcode';
+    location.pathname === '/ndacasestudies' || location.pathname === '/passcode';
+
   return (
     <div style={{ margin: '0' }}>
       {!hideHeaderFooter && <Header />}
