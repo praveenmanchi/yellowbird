@@ -43,6 +43,15 @@ const App: React.FC = () => {
           <Route path='/photography' element={<Photography />} />
           <Route path='/ndacasestudies' element={<NdaCaseStudy />} />
           <Route path='/passcode' element={<Passcode />} />
+          <Route path='/casestudies' element={<CaseStudies />} />
+<Route path='/design-systems' element={<CaseStudies />} />
+<Route path='/product-design' element={<CaseStudies />} />
+<Route path='/ux-research' element={<CaseStudies />} />
+<Route path='/casestudies/:slug' element={<CaseStudyDetails />} />
+
+
+
+
         </Routes>
       </PageTransition>
       {!hideHeaderFooter && <Footer />}

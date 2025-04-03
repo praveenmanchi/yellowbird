@@ -2,7 +2,8 @@ import React from 'react';
 import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 import icon from '../../assets/resource/resource-view-icon.svg';
 import './CaseStudyModalCard.css';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+
 interface Props {
   data: {
     img: string;
@@ -27,20 +28,18 @@ const CaseStudyModalCard: React.FC<Props> = ({ data, resource }) => {
           <span className='case-study-comp-read-time time'>{data?.read} </span>
         </div>
       </div>
-      <div className='case-study-comp-footer'>
-        <Link
-          to={data?.link}
-          target='_blank'
-          className='case-study-comp-footer comp-footer-link'
-        >
-          View
-          {resource ? (
-            <img src={icon} alt='cs' className='case-study-comp-arrow' />
-          ) : (
-            <img src={arrow} alt='cs' className='case-study-comp-arrow' />
-          )}
-        </Link>
-      </div>
+      {data?.link && (
+        <div className='case-study-comp-footer'>
+          <Link to={data.link} className='case-study-comp-footer comp-footer-link'>
+            View
+            <img
+              src={resource ? icon : arrow}
+              alt='arrow'
+              className='case-study-comp-arrow'
+            />
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

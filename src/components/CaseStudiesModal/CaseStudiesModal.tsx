@@ -19,7 +19,7 @@ const caseStudiesModalData = [
     title: 'AMG Driving academy',
     date: false,
     read: '12 min read',
-    link: '',
+    link: '/casestudies/bestornothing',
   },
   {
     img: Payuxs,
@@ -27,7 +27,7 @@ const caseStudiesModalData = [
     title: 'Paysafe',
     date: false,
     read: '7 min read',
-    link: '',
+    link: '/casestudies/paysafe',
   },
   {
     img: carui,
@@ -35,9 +35,10 @@ const caseStudiesModalData = [
     title: 'Instrument Cluster',
     date: false,
     read: '2 min read',
-    link: '',
+    link: '/casestudies/instrumentcluster',
   },
 ];
+
 
 const CaseStudiesModal: React.FC<Props> = ({ setIsModalVisible }: Props) => {
   const handleItemClick = (route: string) => {
