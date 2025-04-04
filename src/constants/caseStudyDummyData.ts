@@ -6,6 +6,8 @@ import cluster from '../assets/dataimages/Instrument Cluster.png';
 import abb from '../assets/dataimages/Abc Re-Designing.png';
 import lms from '../assets/dataimages/Learning management system.png';
 import flight from '../assets/dataimages/Inflight Entertainment System.png';
+import MRO from '../assets/dataimages/MRO.png'
+import ATC from '../assets/dataimages/ATC.png'
 
 export const caseStudyCardDataDummy = [
   {
@@ -63,6 +65,23 @@ export const caseStudyCardDataDummy = [
           insight1Desc: false,
           insight2: false,
           insight2Desc: false,
+          title: 'Air Traffic Control (ATC) Management',
+          description:
+            'Managing modern airspace is a complex and high-stakes task, demanding real-time decisions, constant vigilance, and seamless coordination. This AI-powered application is designed to assist Air Traffic Control (ATC) personnel by integrating cutting-edge artificial intelligence to enhance safety, reduce workload, and optimize operations across airports.',
+          position: 'Project Work',
+          client: 'NDA',
+          tools: '8 min',
+          imgSrc: ATC,
+
+          pathName: 'cortexAi',
+          lock: true,
+        },
+        {
+          insight: false,
+          insight1: false,
+          insight1Desc: false,
+          insight2: false,
+          insight2Desc: false,
           title: 'Cisco foods - Food Delivery Website for the senior citizens',
           description:
             'A thoughtfully designed food delivery website tailored to the unique needs and preferences of senior citizens in India. With accessibility at the forefront, the proposed solution aims to create an inclusive and seamless online experience for this often overlooked demographic.',
@@ -79,13 +98,13 @@ export const caseStudyCardDataDummy = [
           insight1Desc: false,
           insight2: false,
           insight2Desc: false,
-          title: 'CortexAI for deloitte',
+          title: 'Air Traffic Control (ATC) Management',
           description:
-            'Empowering Air Traffic Controllers: Enhancing Airport Operations through Digital Tower Interfaces',
-          position: 'Assignment',
-          client: 'cortext AI',
+            'Managing modern airspace is a complex and high-stakes task, demanding real-time decisions, constant vigilance, and seamless coordination. This AI-powered application is designed to assist Air Traffic Control (ATC) personnel by integrating cutting-edge artificial intelligence to enhance safety, reduce workload, and optimize operations across airports.',
+          position: 'Project Work',
+          client: 'NDA',
           tools: '8 min',
-          imgSrc: benzbanner,
+          imgSrc: MRO,
 
           pathName: 'cortexAi',
           lock: true,

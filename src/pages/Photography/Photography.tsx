@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import './Photography.css';
 import expand from '../../assets/photography/expand.svg';
 import refresh from '../../assets/photography/reload.svg';
-import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
+import view from '../../assets/photography/view.svg'
 import img1 from '../../assets/photography/one.jpg';
 import img2 from '../../assets/photography/one_2.jpg';
 import img3 from '../../assets/photography/one_3.jpg';
@@ -141,23 +141,31 @@ const Photography = () => {
                 display: 'block',
               }}
               onMouseDown={(e) => handleMouseDown(id, e)}
-              onClick={() => setSelectedId(id)}
+              onClick={() => {
+                setSelectedId(id);
+                console.log('Selected ID:', id);
+              }}
               onDoubleClick={() => setFullscreenImg(src)}
               draggable={false}
             />
+
+            {/* Fallback icon as emoji */}
             {selectedId === id && (
-              <img
-                src={arrow}
-                alt='arrow'
-                style={{
-                  position: 'absolute',
-                  top: '6px',
-                  right: '6px',
-                  width: '20px',
-                  height: '20px',
-                }}
-              />
-            )}
+  <img
+    src={view}
+    alt='view'
+    style={{
+      position: 'absolute',
+      top: '6px',
+      right: '6px',
+      width: '24px',
+      height: '24px',
+      zIndex: 10,
+      pointerEvents: 'none'
+    }}
+  />
+)}
+
           </div>
         ))}
       </div>
@@ -170,6 +178,7 @@ const Photography = () => {
             left: 0,
             width: '100vw',
             height: '100vh',
+            overflow: 'hidden',
             backgroundColor: 'rgba(0,0,0,0.9)',
             display: 'flex',
             justifyContent: 'center',
@@ -179,15 +188,19 @@ const Photography = () => {
           onClick={() => setFullscreenImg(null)}
         >
           <div onClick={(e) => e.stopPropagation()}>
-            <img
-              src={fullscreenImg}
-              alt='fullscreen'
-              style={{
-                maxWidth: '90%',
-                maxHeight: '90%',
-                borderRadius: '12px',
-              }}
-            />
+          <img
+  src={fullscreenImg}
+  alt='fullscreen'
+  style={{
+    maxWidth: '100vw',
+    maxHeight: '100vh',
+    objectFit: 'contain',
+    borderRadius: '12px',
+    display: 'block',
+    margin: 'auto',
+  }}
+/>
+
             <button
               style={{
                 position: 'absolute',

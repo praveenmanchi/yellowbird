@@ -37,6 +37,7 @@ const caseStudiesModalData = [
     read: '2 min read',
     link: '/casestudies/instrumentcluster',
   },
+  
 ];
 
 

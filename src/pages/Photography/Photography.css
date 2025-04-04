@@ -7,7 +7,7 @@
 .photography-title {
   color: #fff;
   font-family: Inter;
-  font-size: 48px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: 60px; /* 125% */
@@ -16,7 +16,7 @@
 .photography-description {
   color: #b8c1cc;
   font-family: Inter;
-  font-size: 19.375px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: 36px; /* 185.806% */
