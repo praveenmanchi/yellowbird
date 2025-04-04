@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# 👨‍💻 Praveen Manchi – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the codebase of my **personal portfolio website**. This project is the culmination of my design thinking, UX/UI process, and passion for creating thoughtful, user-centered digital experiences.
 
-Currently, two official plugins are available:
+> 🎯 **This repo is private** and serves as a behind-the-scenes look at how my portfolio is built.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔗 Live Site  
+🌐 [Visit Portfolio](https://yourdomain.com)  
+_(Replace with your actual domain)_
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Built With
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- ⚡️ **React 19** – Fast, modern component-based UI
+- 💨 **Vite** – Lightning-fast build tool
+- 🎨 **TypeScript** – Type safety for better scalability
+- 🧭 **React Router v7** – Seamless page routing
+- ✨ **GSAP** – Smooth animations and page transitions
+- 🧹 **ESLint + TypeScript ESLint** – Clean, maintainable code
+- 🖼️ **CSS Modules** – Scoped styling for components
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧩 Key Features
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Modular Components** – Reusable, scalable structure under `components/` and `sections/`
+- **Responsive Design** – Optimized for all screen sizes
+- **Animated Transitions** – Smooth slide transitions between pages using GSAP
+- **Case Study Routing** – Dynamic routing for individual case studies (`/casestudies/:id`)
+- **Protected Work** – Hidden NDA case studies accessible via `/passcode`
+- **Photography Showcase** – Personal creative expression via `/photography`
+
+---
+
+## 📁 Project Structure
+
+```bash
+src/
+├── assets/                # Images and illustrations
+├── components/            # Reusable UI components
+├── pages/                 # Route-based pages
+├── sections/              # Section blocks used in pages
+├── constants/             # Centralized static data
+public/                    # Static assets like favicon and manifest
+vite.config.ts             # Vite configuration
+tsconfig*.json             # TypeScript configs
+
+
+pnpm install       # Install dependencies
+pnpm dev           # Run the app locally
+pnpm build         # Create a production build
+pnpm preview       # Preview the build locally
+pnpm lint          # Run ESLint
+
+
+📐 Design Thinking
+This portfolio was crafted with a focus on:
+
+🧠 User empathy – Telling my story with clarity and purpose
+
+🧭 Navigation – Intuitive flow from homepage to deeper sections
+
+📸 Visual storytelling – Supporting words with rich visuals
+
+🛠️ Maintainability – Clean codebase for easy updates
+
+📌 Notes
+This is a private repo to protect proprietary code and assets.
+
+Built with ❤️ by Praveen Manch
