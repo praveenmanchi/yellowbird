@@ -19,43 +19,14 @@ const Footer: React.FC = () => {
             className='footer__logo'
           />
           <p className='footer__text'>
-            The rights reservation for this project is currently pending The
-            rights reservation for this project is currently pendingThe rights
-            reservation for this project is currently pendingThe rights
-            reservation for this project is currently pending The rights
-            reservation for this project is currently pending The rights
-            reservation for this project is currently pending
+          This project is part of my personal design portfolio and is intended solely for showcasing my skills and creative process. Please note that the rights reservation and official copyright registration for this work are currently pending. All visual designs, concepts, and written content presented here remain the intellectual property of the creator (Praveen Manchi) unless otherwise stated. Any unauthorized use, reproduction, modification, or distribution for commercial or non-commercial purposes is strictly prohibited.
           </p>
         </div>
         <div className='footer__links-section'>
           <ul className='footer__links'>
             <li className='footer__link-item'>
               <Link to='/' className='footer__link'>
-                Home
-              </Link>
-            </li>
-            <li className='footer__link-item'>
-              <Link to='/aboutme' className='footer__link'>
-                ABOUT
-              </Link>
-            </li>
-            <li className='footer__link-item'>
-              <Link to='/casestudies' className='footer__link'>
-                Case Studies
-              </Link>
-            </li>
-            <li className='footer__link-item'>
-              <Link to='/contact' className='footer__link'>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className='footer__links-section'>
-          <ul className='footer__links'>
-            <li className='footer__link-item'>
-              <Link to='/blog' className='footer__link'>
-                Blog
+                HOME
               </Link>
             </li>
             <li className='footer__link-item'>
@@ -65,12 +36,36 @@ const Footer: React.FC = () => {
             </li>
             <li className='footer__link-item'>
               <Link to='/casestudies' className='footer__link'>
-                Case Studies
+                CASESTUDIES
               </Link>
             </li>
             <li className='footer__link-item'>
               <Link to='/contact' className='footer__link'>
-                Contact
+                CONTACT
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className='footer__links-section'>
+          <ul className='footer__links'>
+            <li className='footer__link-item'>
+              <Link to='/blog' className='footer__link'>
+                BLOG
+              </Link>
+            </li>
+            <li className='footer__link-item'>
+              <Link to='/contact' className='footer__link'>
+                RESUME
+              </Link>
+            </li>
+            <li className='footer__link-item'>
+              <Link to='/designprocess' className='footer__link'>
+                DESIGNPROCESS
+              </Link>
+            </li>
+            <li className='footer__link-item'>
+              <Link to='/photography' className='footer__link'>
+              PHOTOGRAPHY
               </Link>
             </li>
           </ul>

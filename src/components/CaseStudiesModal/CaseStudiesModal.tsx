@@ -52,27 +52,27 @@ const CaseStudiesModal: React.FC<Props> = ({ setIsModalVisible }: Props) => {
         <span className='case-studies-title'>Case Studies</span>
 
         <Link
-          to='/design-systems'
+          to='/casestudies'
           className='case-studies-item'
-          onClick={() => handleItemClick('/design-systems')}
+          onClick={() => handleItemClick('/casestudies')}
         >
           <span className='case-studies-item-title'>DESIGN SYSTEMS</span>
           <img className='case-studies-item-arrow' src={arrow} alt='arrow' />
         </Link>
 
         <Link
-          to='/product-design'
+          to='/casestudies'
           className='case-studies-item'
-          onClick={() => handleItemClick('/product-design')}
+          onClick={() => handleItemClick('/casestudies')}
         >
           <span className='case-studies-item-title'>PRODUCT DESIGN</span>
           <img className='case-studies-item-arrow' src={arrow} alt='arrow' />
         </Link>
 
         <Link
-          to='/ux-research'
+          to='/casestudies'
           className='case-studies-item'
-          onClick={() => handleItemClick('/ux-research')}
+          onClick={() => handleItemClick('/casestudies')}
         >
           <span className='case-studies-item-title'>UX RESEARCH</span>
           <img className='case-studies-item-arrow' src={arrow} alt='arrow' />

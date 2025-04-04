@@ -207,6 +207,9 @@ const caseStudies = {
   ],
 
 
+
+
+  
   paysafe: [
     {
       template: 'image',

@@ -5,7 +5,7 @@ Welcome to the codebase of my **personal portfolio website**. This project is th
 > 🎯 **This repo is private** and serves as a behind-the-scenes look at how my portfolio is built.
 
 ### 🔗 Live Site  
-🌐 [Visit Portfolio](https://yourdomain.com)  
+🌐 [Visit Portfolio](https://www.praveenmanchi.art/)  
 _(Replace with your actual domain)_
 
 ---

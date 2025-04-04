@@ -73,7 +73,7 @@ export const caseStudyCardDataDummy = [
           tools: '8 min',
           imgSrc: ATC,
 
-          pathName: 'cortexAi',
+          pathName: 'aiatc',
           lock: true,
         },
         {

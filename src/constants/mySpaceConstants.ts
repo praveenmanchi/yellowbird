@@ -18,7 +18,7 @@ export const cardData = [
     image: moodBoard,
     description:
       'A collection of visual inspirations shaping my creative process.',
-    link: '/moodboard',
+    link: '/photography',
   },
   {
     title: 'Design Process',
