@@ -1,33 +1,29 @@
 import React, { useState, useEffect } from 'react';
-// import pM from '../../assets/pr-mn-span.svg';
 import './DesignerIntro.css';
 import { tabs } from '../../constants/designerIntr0Constants';
 import ar1 from '../../assets/designerIntro/ar-1.svg';
 import text1 from '../../assets/designerIntro/text-1.svg';
-// import ar2 from '../../assets/designerIntro/ar-2.svg';
-// import text2 from '../../assets/designerIntro/text-2.svg';
-// import ar3 from '../../assets/designerIntro/ar-3.svg';
-// import text3 from '../../assets/designerIntro/text-3.svg';
 import ar4 from '../../assets/designerIntro/ar-4.svg';
 import text4 from '../../assets/designerIntro/text-4.svg';
 
 const DesignerIntro: React.FC = () => {
   const [activeTab, setActiveTab] = useState('For anyone');
-  const activeContent = tabs.find((tab) => tab.id === activeTab);
+  const [hoveredTab, setHoveredTab] = useState<string | null>(null);
+  const [highlightIndex, setHighlightIndex] = useState(0);
+  const [fadeIn, setFadeIn] = useState(true);
 
   const asianNames = [
     'Praveen Manchi',
-    'பிரவீன் மஞ்சி', // Tamil
-    'ప్రవీణ్ మంచి', // Telugu
-    'ಪ್ರವೀಣ್ ಮಂಚಿ', // Kannada
-    'പ്രവീൺ മഞ്ചി', // Malayalam
-    'प्रवीण मान्ची', // Hindi
-    'プラヴィーン・マンチ', // Japanese
-    '普拉文 曼奇', // Chinese (Simplified)
-    '프라빈 만치', // Korean
-    'ปราวีน มันชี', // Thai
+    'பிரவீன் மஞ்சி',
+    'ప్రవీణ్ మంచి',
+    'ಪ್ರವೀಣ್ ಮಂಚಿ',
+    'പ്രവീൺ മഞ്ചി',
+    'प्रवीण मान्ची',
+    'プラヴィーン・マンチ',
+    '普拉文 曼奇',
+    '프라빈 만치',
+    'ปราวีน มันชี',
   ];
-  const [highlightIndex, setHighlightIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,20 +32,33 @@ const DesignerIntro: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const displayedTab = hoveredTab || activeTab;
+  const activeContent = tabs.find((tab) => tab.id === displayedTab);
+
+  // Trigger fade on tab change
+  useEffect(() => {
+    setFadeIn(false);
+    const timeout = setTimeout(() => {
+      setFadeIn(true);
+    }, 50); // short delay to allow opacity reset
+    return () => clearTimeout(timeout);
+  }, [displayedTab]);
+
   return (
     <div className='designer-main-container'>
       <div className='designer-intro'>
         <span className='designer-intro__greeting'>Hello there,</span>
-        <span className='designer-intro__description'>
+
+        <span className={`designer-intro__description fade-container ${fadeIn ? 'visible' : ''}`}>
           {activeContent?.beforeHighlighter}
           <span className='highlighter'>
-            {activeTab === 'For anyone'
+            {displayedTab === 'For anyone'
               ? asianNames[highlightIndex]
               : activeContent?.highlighter}
           </span>
           {activeContent?.middler}
           <span className='highlighter'>{activeContent?.endHighlighter}</span>
-          {activeTab !== 'Product Managers' && <br />}
+          {displayedTab !== 'Product Managers' && <br />}
           {activeContent?.description}
         </span>
 
@@ -59,24 +68,19 @@ const DesignerIntro: React.FC = () => {
               key={tab.id}
               className={`tab ${activeTab === tab.id ? 'active' : ''}`}
               onClick={() => setActiveTab(tab.id)}
+              onMouseEnter={() => setHoveredTab(tab.id)}
+              onMouseLeave={() => setHoveredTab(null)}
             >
               {tab.label}
             </button>
           ))}
         </div>
       </div>
+
       <div className='ar-txt-1'>
         <img src={ar1} alt='' />
         <img src={text1} alt='' />
       </div>
-      {/* <div className='ar-txt-2'>
-        <img src={ar2} alt='' />
-        <img src={text2} alt='' />
-      </div> */}
-      {/* <div className='ar-txt-3'>
-        <img src={ar3} alt='' />
-        <img src={text3} alt='' />
-      </div> */}
       <div className='ar-txt-4'>
         <img src={ar4} alt='' />
         <img src={text4} alt='' />

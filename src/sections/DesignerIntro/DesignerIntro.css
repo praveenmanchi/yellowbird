@@ -91,3 +91,14 @@
   top: 688px;
   right: 100px;
 }
+.fade-container {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-container.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
