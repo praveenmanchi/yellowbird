@@ -4,10 +4,10 @@ import './DesignerIntro.css';
 import { tabs } from '../../constants/designerIntr0Constants';
 import ar1 from '../../assets/designerIntro/ar-1.svg';
 import text1 from '../../assets/designerIntro/text-1.svg';
-import ar2 from '../../assets/designerIntro/ar-2.svg';
-import text2 from '../../assets/designerIntro/text-2.svg';
-import ar3 from '../../assets/designerIntro/ar-3.svg';
-import text3 from '../../assets/designerIntro/text-3.svg';
+// import ar2 from '../../assets/designerIntro/ar-2.svg';
+// import text2 from '../../assets/designerIntro/text-2.svg';
+// import ar3 from '../../assets/designerIntro/ar-3.svg';
+// import text3 from '../../assets/designerIntro/text-3.svg';
 import ar4 from '../../assets/designerIntro/ar-4.svg';
 import text4 from '../../assets/designerIntro/text-4.svg';
 

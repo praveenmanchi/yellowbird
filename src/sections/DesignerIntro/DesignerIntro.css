@@ -1,11 +1,11 @@
 /* Import the custom font */
 @font-face {
   font-family: 'Magellot Demo';
-  src: url('../../fonts/MagellotDemo.woff2') format('woff2'),
-    url('../../fonts/MagellotDemo.woff') format('woff');
+  src: url('/fonts/Magellot.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 
 /* Apply the font family to the relevant classes */
 .designer-main-container {
