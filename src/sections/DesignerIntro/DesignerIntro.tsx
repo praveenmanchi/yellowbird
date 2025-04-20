@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './DesignerIntro.css';
+import gsap from 'gsap';
 import { tabs } from '../../constants/designerIntr0Constants';
 import ar1 from '../../assets/designerIntro/ar-1.svg';
 import text1 from '../../assets/designerIntro/text-1.svg';
@@ -11,6 +12,10 @@ const DesignerIntro: React.FC = () => {
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(true);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const mouseX = useRef(0);
+  const mouseY = useRef(0);
+  const idleTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const asianNames = [
     'Praveen Manchi',
@@ -35,18 +40,55 @@ const DesignerIntro: React.FC = () => {
   const displayedTab = hoveredTab || activeTab;
   const activeContent = tabs.find((tab) => tab.id === displayedTab);
 
-  // Trigger fade on tab change
   useEffect(() => {
     setFadeIn(false);
     const timeout = setTimeout(() => {
       setFadeIn(true);
-    }, 50); // short delay to allow opacity reset
+    }, 50);
     return () => clearTimeout(timeout);
   }, [displayedTab]);
 
+  // 🟡 Glow + GSAP effect
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const setGlowVisible = (visible: boolean) => {
+      const overlay = container.querySelector('.grid-hover-overlay') as HTMLElement;
+      if (overlay) {
+        overlay.style.opacity = visible ? '1' : '0';
+      }
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = container.getBoundingClientRect();
+      mouseX.current = e.clientX - rect.left;
+      mouseY.current = e.clientY - rect.top;
+
+      gsap.to(container, {
+        duration: 0.2,
+        '--x': `${mouseX.current}px`,
+        '--y': `${mouseY.current}px`,
+        ease: 'power3.out'
+      });
+
+      setGlowVisible(true);
+
+      if (idleTimeout.current) clearTimeout(idleTimeout.current);
+      idleTimeout.current = setTimeout(() => {
+        setGlowVisible(false);
+      }, 1000);
+    };
+
+    container.addEventListener('mousemove', handleMouseMove);
+    return () => container.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
     <div className='designer-main-container'>
-      <div className='designer-intro'>
+      <div className='designer-intro' ref={containerRef}>
+        <div className='grid-hover-overlay' />
+
         <span className='designer-intro__greeting'>Hello there,</span>
 
         <span className={`designer-intro__description fade-container ${fadeIn ? 'visible' : ''}`}>
@@ -75,15 +117,15 @@ const DesignerIntro: React.FC = () => {
             </button>
           ))}
         </div>
-      </div>
 
-      <div className='ar-txt-1'>
-        <img src={ar1} alt='' />
-        <img src={text1} alt='' />
-      </div>
-      <div className='ar-txt-4'>
-        <img src={ar4} alt='' />
-        <img src={text4} alt='' />
+        <div className='ar-txt-1'>
+          <img src={ar1} alt='' />
+          <img src={text1} alt='' />
+        </div>
+        <div className='ar-txt-4'>
+          <img src={ar4} alt='' />
+          <img src={text4} alt='' />
+        </div>
       </div>
     </div>
   );

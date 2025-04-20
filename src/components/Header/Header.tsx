@@ -1,41 +1,43 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { usePostHog } from 'posthog-js/react';
+
 import praveenLogo from '../../assets/logo-thunderstorm-96.d1126ac.svg fill.svg';
 import './Header.css';
 import ResourceModal from '../ResourceModal/ResourceModal';
 import CaseStudiesModal from '../CaseStudiesModal/CaseStudiesModal';
 
 const Header: React.FC = () => {
+  const posthog = usePostHog();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isResourceModalVisible, setIsResourceModalVisible] = useState(false);
-  const [activeLink, setActiveLink] = useState<string>(
-    window.location.pathname
-  );
+  const [activeLink, setActiveLink] = useState<string>(window.location.pathname);
+
   const caseStudiesRef = useRef<HTMLLIElement>(null);
   const resourcesRef = useRef<HTMLLIElement>(null);
-  // Handle regular link clicks
+
   const handleLinkClick = (path: string) => {
+    posthog?.capture('Header Nav Click', { destination: path });
     setIsModalVisible(false);
     setIsResourceModalVisible(false);
     setActiveLink(path);
   };
 
-  // Update all dropdown/hover handlers
   const handleCaseStudiesHover = () => {
+    posthog?.capture('Header Hover', { section: 'Case Studies' });
     setIsResourceModalVisible(false);
     setIsModalVisible(true);
     setActiveLink('#case-studies');
   };
 
   const handleResourceHover = () => {
+    posthog?.capture('Header Hover', { section: 'Resource' });
     setIsModalVisible(false);
     setIsResourceModalVisible(true);
     setActiveLink('#resource');
   };
 
   const handleMouseLeave = () => {
-    // Add a small delay to prevent the dropdown from closing immediately
-    // This makes the interaction feel smoother when moving between the link and dropdown
     setTimeout(() => {
       if (!document.querySelector('.case-studies-modal:hover')) {
         setIsModalVisible(false);
@@ -45,7 +47,6 @@ const Header: React.FC = () => {
     }, 100);
   };
 
-  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -85,7 +86,10 @@ const Header: React.FC = () => {
         }`}
       >
         <div className='header-left'>
-          <Link to='/' onClick={() => handleLinkClick('/')}>
+          <Link
+            to='/'
+            onClick={() => handleLinkClick('/')}
+          >
             <img src={praveenLogo} alt='Praveen Manchi' />
           </Link>
         </div>
@@ -145,6 +149,7 @@ const Header: React.FC = () => {
           </ul>
         </nav>
       </header>
+
       {isModalVisible && (
         <div
           className='case-studies-modal'
@@ -157,6 +162,7 @@ const Header: React.FC = () => {
           <CaseStudiesModal setIsModalVisible={setIsModalVisible} />
         </div>
       )}
+
       {isResourceModalVisible && (
         <div
           className='case-studies-modal'

@@ -98,15 +98,14 @@ export const caseStudyCardDataDummy = [
           insight1Desc: false,
           insight2: false,
           insight2Desc: false,
-          title: 'Air Traffic Control (ATC) Management',
+          title: 'Aviation MRO Software',
           description:
-            'Managing modern airspace is a complex and high-stakes task, demanding real-time decisions, constant vigilance, and seamless coordination. This AI-powered application is designed to assist Air Traffic Control (ATC) personnel by integrating cutting-edge artificial intelligence to enhance safety, reduce workload, and optimize operations across airports.',
+            'Aviation MRO (Maintenance, Repair, and Overhaul) software is a specialized digital solution designed to manage and optimize the various processes involved in maintaining aircraft. It provides a suite of tools for planning, scheduling, executing maintenance tasks, managing inventory, and ensuring regulatory compliance.',
           position: 'Project Work',
           client: 'NDA',
           tools: '8 min',
           imgSrc: MRO,
-
-          pathName: 'cortexAi',
+          pathName: 'Aviation',
           lock: true,
         },
       ],

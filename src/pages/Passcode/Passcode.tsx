@@ -1,5 +1,7 @@
+console.log('🔁 redirect param:', new URLSearchParams(location.search).get('redirect'));
+
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import eye from '../../assets/nda/eye.svg';
 import unlock from '../../assets/nda/unlock.svg';
 import returnIcon from '../../assets/nda/return.svg';
@@ -7,48 +9,57 @@ import './Passcode.css';
 
 const Passcode = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const [passcode, setPasscode] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
 
-  const correctPasscode = '1234'; // Change this to the actual passcode
+  const correctPasscode = import.meta.env.VITE_PASSCODE;
+
+  const redirectTo = new URLSearchParams(location.search).get('redirect');
+  const safeRedirect = redirectTo?.startsWith('/casestudies/')
+    ? redirectTo
+    : '/';
 
   const handleUnlock = () => {
     if (passcode === correctPasscode) {
+      sessionStorage.setItem(`unlocked-${safeRedirect}`, 'true');
       setError('');
-      navigate('/casestudydetails');
+      navigate(safeRedirect);
     } else {
-      setError('Please enter valid password budddy');
+      setError('Incorrect passcode, try again');
     }
   };
 
   return (
     <div className='nda-container'>
       <span className='nda-warning-title'>PRIVATE CONTENT</span>
-
       <span className='nda-access-text passcode-text'>
-        Enter passcode Mentioned in resume to access Project
+        Enter passcode mentioned in resume to access project
       </span>
       <div className='nda-access-container'>
-        <div
-          className={`nda-input-container ${
-            error ? 'error' : ''
-          } passcode-access-project`}
-        >
+        <div className={`nda-input-container ${error ? 'error' : ''} passcode-access-project`}>
           <input
-            type='password'
+            type={showPassword ? 'text' : 'password'}
             className='nda-password-input'
             value={passcode}
             onChange={(e) => setPasscode(e.target.value)}
           />
-          <img src={eye} alt='' />
+          <img
+            src={eye}
+            alt='toggle password'
+            onClick={() => setShowPassword(!showPassword)}
+            style={{ cursor: 'pointer' }}
+          />
         </div>
-        {error && <p className='error-message'>{error}</p>}{' '}
+        {error && <p className='error-message'>{error}</p>}
         <button className='nda-unlock-button' onClick={handleUnlock}>
-          <img src={unlock} alt='' />
+          <img src={unlock} alt='unlock icon' />
           Unlock
         </button>
         <button className='nda-return-button' onClick={() => navigate(-1)}>
-          <img src={returnIcon} alt='' />
+          <img src={returnIcon} alt='return icon' />
           Return Back
         </button>
       </div>

@@ -41,7 +41,6 @@ const App: React.FC = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/designprocess' element={<MyDesignProcess />} />
-          <Route path='/casestudies/:id' element={<CaseStudyDetails />} />
           <Route path='/photography' element={<Photography />} />
           <Route path='/ndacasestudies' element={<NdaCaseStudy />} />
           <Route path='/passcode' element={<Passcode />} />
@@ -50,7 +49,8 @@ const App: React.FC = () => {
           <Route path='/design-systems' element={<CaseStudies />} />
           <Route path='/product-design' element={<CaseStudies />} />
           <Route path='/ux-research' element={<CaseStudies />} />
-          <Route path='/casestudies/:slug' element={<CaseStudyDetails />} />
+          <Route path='/casestudies/:id' element={<CaseStudyDetails />} />
+
         </Routes>
       </PageTransition>
       {!hideHeaderFooter && <Footer />}

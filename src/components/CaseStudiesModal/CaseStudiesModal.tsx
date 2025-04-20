@@ -18,8 +18,8 @@ const caseStudiesModalData = [
     chipContent: 'UX/UI Design',
     title: 'AMG Driving academy',
     date: false,
-    read: '12 min read',
-    link: '/casestudies/bestornothing',
+    pathName: 'bestornothing',
+  lock: false
   },
   {
     img: Payuxs,
@@ -27,7 +27,9 @@ const caseStudiesModalData = [
     title: 'Paysafe',
     date: false,
     read: '7 min read',
-    link: '/casestudies/paysafe',
+    pathName: 'paysafe',
+  lock: false
+   
   },
   {
     img: carui,
@@ -35,7 +37,9 @@ const caseStudiesModalData = [
     title: 'Instrument Cluster',
     date: false,
     read: '2 min read',
-    link: '/casestudies/instrumentcluster',
+    
+    pathName: 'instrumentcluster',
+  lock: false
   },
   
 ];

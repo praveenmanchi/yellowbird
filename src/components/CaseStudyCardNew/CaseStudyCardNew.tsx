@@ -36,9 +36,13 @@ const CaseStudyCardNew: React.FC<Props> = ({
 }: Props) => {
   return (
     <Link
-      to={data?.lock ? '/passcode' : `/casestudies/${data?.pathName}`}
-      style={{ textDecoration: 'none' }}
-    >
+  to={
+    data?.lock && data?.pathName
+      ? `/passcode?redirect=/casestudies/${data.pathName}`
+      : `/casestudies/${data?.pathName}`
+  }
+  style={{ textDecoration: 'none' }}
+>
       <div className='case-study-card'>
         <div
           className={

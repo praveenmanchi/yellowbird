@@ -36,3 +36,4 @@ const MySpaceCard: React.FC<Props> = ({ card }) => {
 };
 
 export default MySpaceCard;
+

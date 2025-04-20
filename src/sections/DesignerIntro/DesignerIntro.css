@@ -1,104 +1,128 @@
-/* Import the custom font */
 @font-face {
   font-family: 'Magellot Demo';
-  src: url('/fonts/Magellot.ttf') format('truetype');
+  src: url('/fonts/Magellot.woff2') format('woff2'),
+       url('/fonts/Magellot.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
-
-/* Apply the font family to the relevant classes */
 .designer-main-container {
   padding: 40px;
 }
+
 .designer-intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 90vh;
   justify-content: center;
   padding: 0px 40px;
   font-family: 'Magellot Demo', sans-serif;
-  background-image: url('../../assets/grids-bg.svg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
 
-.designer-intro__greeting {
-  font-family: 'Magellot Demo', sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-}
-.designer-intro__logo {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.designer-intro__description {
-  font-family: 'Magellot Demo', sans-serif;
-  font-size: 68px;
-  font-weight: 400;
-  max-width: 60%;
-}
-.highlighter {
-  color: #ffb41f;
-  font-family: 'Magellot Demo', sans-serif;
-  font-size: 67.862px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 69.41px; /* 102.28% */
-  letter-spacing: -1.424px;
-  margin-left: 14px;
-  margin-right: 14px;
-}
-.tabs {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.tab {
-  padding: 10px;
-  background: transparent;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  color: gray;
-  transition: color 0.3s;
-}
-
-.tab.active {
-  color: white;
-}
-.ar-txt-1 {
-  position: absolute;
-  top: 107px;
-  right: 170px;
-}
-.ar-txt-2 {
-  position: absolute;
-  top: 149px;
-  left: 320px;
-}
-.ar-txt-3 {
-  position: absolute;
-  bottom: 2%;
-  left: 563px;
-}
-.ar-txt-4 {
-  position: absolute;
-  top: 688px;
-  right: 100px;
-}
-.fade-container {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.fade-container.visible {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
+  background-color: #00030A;
+  background-image:
+    linear-gradient(to right, rgba(20, 24, 31, 1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 24, 31, 1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: center;
+    transition: background-image 0.4s ease-in-out;
+  }
+  
+  .grid-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+      background-size: 30px 30px;
+      background-position: center;
+    
+      mask-image: radial-gradient(circle 100px at var(--x, 50%) var(--y, 50%), white 40%, transparent 70%);
+      -webkit-mask-image: radial-gradient(circle 100px at var(--x, 50%) var(--y, 50%), white 40%, transparent 70%);
+      mix-blend-mode: screen;
+    
+      z-index: 2;
+    }
+  
+  .designer-intro__greeting {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  
+  .designer-intro__description {
+    font-size: 68px;
+    font-weight: 400;
+    max-width: 60%;
+  }
+  
+  .highlighter {
+    color: #ffb41f;
+    font-size: 67.862px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 69.41px;
+    letter-spacing: -1.424px;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .tab {
+    padding: 10px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+  }
+  
+  .tab.active {
+    color: white;
+  }
+  
+  .ar-txt-1 {
+    position: absolute;
+    top: 107px;
+    right: 170px;
+  }
+  .ar-txt-2 {
+    position: absolute;
+    top: 149px;
+    left: 320px;
+  }
+  .ar-txt-3 {
+    position: absolute;
+    bottom: 2%;
+    left: 563px;
+  }
+  .ar-txt-4 {
+    position: absolute;
+    top: 688px;
+    right: 100px;
+  }
+  
+  .fade-container {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .fade-container.visible {
+    opacity: 1;
+    transform: translateY(0px);
+  }

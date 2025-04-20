@@ -1,6 +1,8 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import './caseStudyDetails.css';
+import { caseStudyCardDataDummy } from '../../constants/caseStudyDummyData';
+
 
 import chain from '../../assets/caseStudiesDetails/chain.svg';
 import dots from '../../assets/caseStudiesDetails/dots.svg';
@@ -206,6 +208,143 @@ const caseStudies = {
     },
   ],
 
+
+
+  aiatc: [
+    {
+      template: 'image',
+      imgSrc: nobrokerbanner,
+    },
+    {
+      template: 'content',
+      title: 'aiatc',
+      description:
+        'Create a seamless and user-friendly a new user experience to occupy a new flat, house or any property and also a brokerage-free proptech company that provides all sorts of real estate services under marketplace, which includes buying, renting, packers & movers, and home services Re-designing a new user experience to occupy a new flat, house or any property at https://www.nobroker.in/ (Personal Casestudy, not affiliated with any company)',
+      category: 'Web App',
+      client: 'NDA',
+      tools: [figma, invision],
+      published: '01-04-2025',
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker1,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FXIoJ5Y3lSvZwElq91Qt5Zm%2FNobroker-1%3Fnode-id%3D1-2%26t%3DA25AaWvBIegF0nC2-1',
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker2,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FG5TFaKvKVEjmALWDicSR0B%2FNobroker-2%3Fnode-id%3D1-40%26t%3DOFm7CAKqy3JQMcBy-1',
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker3,
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker4,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FQZ2W2epOOx4rHOH1bRk0bI%2FNobroker-UI%3Fnode-id%3D1-28871%26t%3DDDEZqQbGMtQ1ZwkX-1',
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker5,
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker6,
+    },
+
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FQZ2W2epOOx4rHOH1bRk0bI%2FNobroker-UI%3Fnode-id%3D1-2%26t%3DDDEZqQbGMtQ1ZwkX-1',
+    },
+
+    {
+      template: 'image',
+      imgSrc: nobroker7,
+    },
+  ],
+
+
+  
+  Aviation: [
+    {
+      template: 'image',
+      imgSrc: nobrokerbanner,
+    },
+    {
+      template: 'content',
+      title: 'Aviation',
+      description:
+        'Aviation a seamless and user-friendly a new user experience to occupy a new flat, house or any property and also a brokerage-free proptech company that provides all sorts of real estate services under marketplace, which includes buying, renting, packers & movers, and home services Re-designing a new user experience to occupy a new flat, house or any property at https://www.nobroker.in/ (Personal Casestudy, not affiliated with any company)',
+      category: 'Web App',
+      client: 'NDA',
+      tools: [figma, invision],
+      published: '01-04-2025',
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker1,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FXIoJ5Y3lSvZwElq91Qt5Zm%2FNobroker-1%3Fnode-id%3D1-2%26t%3DA25AaWvBIegF0nC2-1',
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker2,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FG5TFaKvKVEjmALWDicSR0B%2FNobroker-2%3Fnode-id%3D1-40%26t%3DOFm7CAKqy3JQMcBy-1',
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker3,
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker4,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FQZ2W2epOOx4rHOH1bRk0bI%2FNobroker-UI%3Fnode-id%3D1-28871%26t%3DDDEZqQbGMtQ1ZwkX-1',
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker5,
+    },
+    {
+      template: 'image',
+      imgSrc: nobroker6,
+    },
+
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FQZ2W2epOOx4rHOH1bRk0bI%2FNobroker-UI%3Fnode-id%3D1-2%26t%3DDDEZqQbGMtQ1ZwkX-1',
+    },
+
+    {
+      template: 'image',
+      imgSrc: nobroker7,
+    },
+  ],
 
 
 
@@ -455,68 +594,76 @@ const caseStudies = {
 
 const CaseStudyDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+const navigate = useNavigate();
+const [isAuthorized, setIsAuthorized] = useState(false);
 
-  const caseStudy = caseStudies[id as keyof typeof caseStudies];
+const caseStudy = id ? caseStudies[id as keyof typeof caseStudies] : null;
+const meta = caseStudyCardDataDummy.find((cs) => cs.pathName === id);
 
-  if (!caseStudy) {
-    return <h2>Case Study Not Found</h2>;
+const unlockKey = `unlocked-/casestudies/${id}`;
+const isUnlocked = sessionStorage.getItem(unlockKey) === 'true';
+
+useEffect(() => {
+  if (meta?.lock && !isUnlocked) {
+    navigate(`/passcode?redirect=/casestudies/${id}`);
+  } else {
+    setIsAuthorized(true);
   }
+}, [meta, isUnlocked, id, navigate]);
+
+if (!caseStudy) return <h2>Case Study Not Found</h2>;
+if (!isAuthorized) return <div>Loading protected content...</div>;
+
 
   return (
     <div className='case-study-details-container'>
-      {caseStudy?.map((eachSec, idx) => {
-        return (
-          <>
-            {eachSec?.template === 'image' && (
-              <img
-                className='case-study-details-banner-img'
-                src={eachSec?.imgSrc}
-                alt=''
+      {caseStudy.map((eachSec, idx) => (
+        <React.Fragment key={idx}>
+          {eachSec.template === 'image' && (
+            <img
+              className='case-study-details-banner-img'
+              src={eachSec.imgSrc}
+              alt=''
+            />
+          )}
+
+          {eachSec.template === 'content' && (
+            <div className='case-study-details-content'>
+              <div className='case-study-details-header'>
+                <span className='case-study-details-title'>{eachSec.title}</span>
+                <div className='case-study-details-link-container'>
+                  <div className='link-container'>
+                    <img src={chain} alt='' />
+                  </div>
+                  <div className='link-container'>
+                    <img src={dots} alt='' />
+                  </div>
+                </div>
+              </div>
+              <div className='case-study-details-footer'>
+                <div className='footer-section-desc'>{eachSec.description}</div>
+                <div className='footer-section-desc-icons'>
+                  <img src={figma} alt='' className='desc-icon' />
+                  <img src={xd} alt='' className='desc-icon' />
+                  <img src={sketch} alt='' className='desc-icon' />
+                  <img src={invision} alt='' className='desc-icon' />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {eachSec.template === 'iframe' && (
+            <div className='design-process-miro-board'>
+              <iframe
+                src={eachSec.srcUrl}
+                width='100%'
+                height='800'
+                allowFullScreen
               />
-            )}
-
-            {eachSec?.template === 'content' && (
-              <div className='case-study-details-content'>
-                <div className='case-study-details-header'>
-                  <span className='case-study-details-title'>
-                    {eachSec.title}
-                  </span>
-                  <div className='case-study-details-link-container'>
-                    <div className='link-container'>
-                      <img src={chain} alt='' />
-                    </div>
-                    <div className='link-container'>
-                      <img src={dots} alt='' />
-                    </div>
-                  </div>
-                </div>
-                <div className='case-study-details-footer'>
-                  <div className='footer-section-desc'>
-                    {eachSec.description}
-                  </div>
-                  <div className='footer-section-desc-icons'>
-                    <img src={figma} alt='' className='desc-icon' />
-                    <img src={xd} alt='' className='desc-icon' />
-                    <img src={sketch} alt='' className='desc-icon' />
-                    <img src={invision} alt='' className='desc-icon' />
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {eachSec?.template === 'iframe' && (
-              <div className='design-process-miro-board'>
-                <iframe
-                  src={eachSec?.srcUrl}
-                  width='100%'
-                  height='800'
-                  allowFullScreen
-                ></iframe>
-              </div>
-            )}
-          </>
-        );
-      })}
+            </div>
+          )}
+        </React.Fragment>
+      ))}
     </div>
   );
 };

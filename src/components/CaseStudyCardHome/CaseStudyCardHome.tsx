@@ -2,7 +2,7 @@ import React from 'react';
 import arrow from '../../assets/forward-arrow.svg';
 import figmaLogo from '../../assets/figma.svg';
 import tool from '../../assets/micro-tool.svg';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom'; // ✅ Corrected import
 import './CaseStudyCardHome.css';
 
 interface Props {
@@ -10,6 +10,7 @@ interface Props {
   microTool?: boolean;
   Casestudy?: boolean;
   img?: string;
+  onClick?: () => void; // ✅ Added click handler
   data?: {
     insight?: boolean;
     insight1?: string;
@@ -24,6 +25,7 @@ interface Props {
     link?: string;
     pathName?: string;
     video?: string;
+    client?: string;
   };
 }
 
@@ -31,11 +33,13 @@ const CaseStudyCardHome: React.FC<Props> = ({
   expertise,
   microTool,
   data,
+  onClick, // ✅ Handle it
 }: Props) => {
   return (
     <Link
       to={`/casestudies/${data?.pathName}`}
       style={{ textDecoration: 'none' }}
+      onClick={onClick} // ✅ Track the click
     >
       <div className='case-study-card'>
         <div
@@ -92,10 +96,7 @@ const CaseStudyCardHome: React.FC<Props> = ({
                 </div>
               </div>
             </div>
-            <div
-              className='case-study-details'
-              // style={{ backgroundColor: Casestudy ? '' : 'black' }}
-            >
+            <div className='case-study-details'>
               <span className='case-study-description'>{data?.title}</span>
               <span className='case-study-company '>{data?.description}</span>
               <div className='case-study-info'>
@@ -116,7 +117,7 @@ const CaseStudyCardHome: React.FC<Props> = ({
                       <img src={figmaLogo} alt='' className='case-study-logo' />
                       {!microTool && (
                         <img src={tool} alt='' className='case-study-logo' />
-                      )}{' '}
+                      )}
                     </div>
                   </div>
                 </div>

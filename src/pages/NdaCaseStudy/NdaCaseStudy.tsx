@@ -10,7 +10,7 @@ const NdaCaseStudy = () => {
   const [passcode, setPasscode] = useState('');
   const [error, setError] = useState('');
 
-  const correctPasscode = '1234'; // Change this to the actual passcode
+  const correctPasscode = import.meta.env.VITE_PASSCODE; // Change this to the actual passcode
 
   const handleUnlock = () => {
     if (passcode === correctPasscode) {

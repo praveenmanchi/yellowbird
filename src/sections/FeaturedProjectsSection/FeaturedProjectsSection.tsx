@@ -1,15 +1,27 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // 👈 Import useNavigate
+import { useNavigate } from 'react-router-dom';
+import { usePostHog } from 'posthog-js/react'; // ✅ Import PostHog
 import './FeaturedProjectsSection.css';
 import arrow from '../../assets/forward-arrow.svg';
 import { featuresProjectCardsData } from '../../constants/featuredConstants';
 import CaseStudyCardHome from '../../components/CaseStudyCardHome/CaseStudyCardHome';
 
 const FeaturedProjectsSection: React.FC = () => {
-  const navigate = useNavigate(); // 👈 Hook for programmatic navigation
+  const navigate = useNavigate();
+  const posthog = usePostHog(); // ✅ Initialize PostHog
 
   const handleViewMore = () => {
-    navigate('/casestudies'); // 👈 Replace with your actual route path
+    posthog?.capture('View More Clicked', { section: 'Featured Projects' });
+    navigate('/casestudies');
+  };
+
+  const handleCardClick = (title: string, pathName: string, client: string) => {
+    posthog?.capture('Featured Project Clicked', {
+      title,
+      slug: pathName,
+      client,
+    });
+    navigate(`/casestudies/${pathName}`);
   };
 
   return (
@@ -20,9 +32,16 @@ const FeaturedProjectsSection: React.FC = () => {
         problems with my thoughts and my process to dlivery the top-noch
         quality.
       </p>
+
       {featuresProjectCardsData?.caseStudyLg?.map((card, idx) => (
-        <CaseStudyCardHome key={idx} data={card} microTool={true} />
+        <CaseStudyCardHome
+          key={idx}
+          data={card}
+          microTool={true}
+          onClick={() => handleCardClick(card.title || '', card.pathName || '', card.client || '')}
+        />
       ))}
+
       <div className='case-study-read-more-btn-container'>
         <div className='case-study-button-container'>
           <button className='case-study-button' onClick={handleViewMore}>
