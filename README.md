@@ -6,7 +6,7 @@ Welcome to the codebase of my **personal portfolio website**. This project is th
 
 ### 🔗 Live Site  
 🌐 [Visit Portfolio](https://www.praveenmanchi.art/)  
-_(Replace with your actual domain)_
+
 
 ---
 
