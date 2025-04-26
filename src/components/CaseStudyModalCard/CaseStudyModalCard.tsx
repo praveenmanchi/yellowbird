@@ -9,50 +9,65 @@ interface Props {
     img: string;
     chipContent: string;
     title: string;
-    date: string;
-    read: string;
-    link?: string;
-    pathName: string;
-    lock?: boolean;
-    client?: string;
+    date?: string;
+    read?: string;
+    link: string;
   };
   resource?: boolean;
 }
 
 const CaseStudyModalCard: React.FC<Props> = ({ data, resource }) => {
-  const isLocked = data.lock === true;
-  const finalPath = data.pathName;
+  const isInternalLink = data.link.startsWith('/');
 
-  const linkTo = isLocked && finalPath
-  ? `/passcode?redirect=/casestudies/${finalPath}`
-  : `/casestudies/${finalPath}`;
-
-
-  console.log('🧭 Link generated for', data.title, ':', linkTo);
+  if (!data?.link || data.link === 'undefined') return null;
 
   return (
-    <div className='case-study-comp' style={{ width: resource ? '25%' : '' }}>
+    <div className='case-study-comp'>
       <div className='case-study-comp-header'>
-        <img src={data.img} alt='cs' className='case-study-comp-image' />
-        <div className='case-study-comp-title'>{data.chipContent}</div>
-        <span className='case-study-comp-description'>{data.title}</span>
-        <div className='case-study-comp-date date'>
-          {data.date}
-          <span className='case-study-comp-read-time time'>{data.read}</span>
-        </div>
+        <img
+          src={data?.img}
+          alt={`${data?.chipContent} preview`}
+          className='case-study-comp-image'
+        />
+        <div className='case-study-comp-title'>{data?.chipContent}</div>
+        <span className='case-study-comp-description'>{data?.title}</span>
+
+        {(data?.date || data?.read) && (
+          <div className='case-study-comp-date date'>
+            {data?.date}
+            <span className='case-study-comp-read-time time'>{data?.read}</span>
+          </div>
+        )}
       </div>
 
-      <div className='case-study-comp-footer'>
-        <Link to={linkTo} className='case-study-comp-footer comp-footer-link'>
-          {isLocked && <span style={{ marginRight: '6px' }}>🔒</span>}
-          View
-          <img
-            src={resource ? icon : arrow}
-            alt='arrow'
-            className='case-study-comp-arrow'
-          />
-        </Link>
-      </div>
+      {data?.link && (
+        <div className='case-study-comp-footer'>
+          {isInternalLink ? (
+            <Link to={data.link} className='comp-footer-link'>
+              <span>View</span>
+              <img
+                src={resource ? icon : arrow}
+                alt='arrow'
+                className='case-study-comp-arrow'
+              />
+            </Link>
+          ) : (
+            <a
+              href={data.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='comp-footer-link'
+            >
+              <span>View</span>
+              <img
+                src={resource ? icon : arrow}
+                alt='arrow'
+                className='case-study-comp-arrow'
+              />
+            </a>
+          )}
+        </div>
+      )}
     </div>
   );
 };
