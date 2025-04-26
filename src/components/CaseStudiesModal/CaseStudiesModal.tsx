@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 import wArrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import './CaseStudiesModal.css';
@@ -16,36 +16,30 @@ const caseStudiesModalData = [
   {
     img: Benzxs,
     chipContent: 'UX/UI Design',
-    title: 'AMG Driving academy',
-    date: false,
-    pathName: 'bestornothing',
-  lock: false
+    title: 'AMG Driving Academy',
+    date: '',
+    read: '12 min read',
+    link: '/casestudies/bestornothing',
   },
   {
     img: Payuxs,
     chipContent: 'UI Design',
     title: 'Paysafe',
-    date: false,
+    date: '',
     read: '7 min read',
-    pathName: 'paysafe',
-  lock: false
-   
+    link: '/casestudies/paysafe',
   },
   {
     img: carui,
     chipContent: 'HMI Design',
     title: 'Instrument Cluster',
-    date: false,
+    date: '',
     read: '2 min read',
-    
-    pathName: 'instrumentcluster',
-  lock: false
+    link: '/casestudies/instrumentcluster',
   },
-  
 ];
 
-
-const CaseStudiesModal: React.FC<Props> = ({ setIsModalVisible }: Props) => {
+const CaseStudiesModal: React.FC<Props> = ({ setIsModalVisible }) => {
   const handleItemClick = (route: string) => {
     setIsModalVisible(false);
   };
@@ -56,27 +50,27 @@ const CaseStudiesModal: React.FC<Props> = ({ setIsModalVisible }: Props) => {
         <span className='case-studies-title'>Case Studies</span>
 
         <Link
-          to='/casestudies'
+          to='/design-systems'
           className='case-studies-item'
-          onClick={() => handleItemClick('/casestudies')}
+          onClick={() => handleItemClick('/design-systems')}
         >
           <span className='case-studies-item-title'>DESIGN SYSTEMS</span>
           <img className='case-studies-item-arrow' src={arrow} alt='arrow' />
         </Link>
 
         <Link
-          to='/casestudies'
+          to='/product-design'
           className='case-studies-item'
-          onClick={() => handleItemClick('/casestudies')}
+          onClick={() => handleItemClick('/product-design')}
         >
           <span className='case-studies-item-title'>PRODUCT DESIGN</span>
           <img className='case-studies-item-arrow' src={arrow} alt='arrow' />
         </Link>
 
         <Link
-          to='/casestudies'
+          to='/ux-research'
           className='case-studies-item'
-          onClick={() => handleItemClick('/casestudies')}
+          onClick={() => handleItemClick('/ux-research')}
         >
           <span className='case-studies-item-title'>UX RESEARCH</span>
           <img className='case-studies-item-arrow' src={arrow} alt='arrow' />
@@ -110,16 +104,15 @@ const CaseStudiesModal: React.FC<Props> = ({ setIsModalVisible }: Props) => {
           style={{ textDecoration: 'none' }}
           onClick={() => handleItemClick('/casestudies')}
         >
-          <span className='case-studies-button-text'>
-            View All Case Studies
-          </span>
+          <span className='case-studies-button-text'>View All Case Studies</span>
           <img className='case-studies-button-arrow' src={wArrow} alt='arrow' />
         </Link>
       </div>
+
       <div className='recent-case-studies-container'>
         <span className='recent-case-studies-title'>Recent Case Studies</span>
         <div className='recent-case-studies'>
-          {caseStudiesModalData?.map((eachCard, idx) => (
+          {caseStudiesModalData.map((eachCard, idx) => (
             <CaseStudyModalCard data={eachCard} key={idx} />
           ))}
         </div>
