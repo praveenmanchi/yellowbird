@@ -4,7 +4,7 @@ import arrow from '../../assets/caseStudiesModal/cs-arrow.svg';
 import wArrow from '../../assets/caseStudiesModal/white-arrow.svg';
 import './CaseStudiesModal.css';
 import Benzxs from '../../assets/resource/benz_xs.png';
-import Payuxs from '../../assets/resource/Paysafe_xs.png';
+import Payuxs from '../../assets/resource/Paysafe_xs.jpg';
 import carui from '../../assets/resource/Car_xs.png';
 import CaseStudyModalCard from '../CaseStudyModalCard/CaseStudyModalCard';
 
@@ -16,24 +16,24 @@ const caseStudiesModalData = [
   {
     img: Benzxs,
     chipContent: 'UX/UI Design',
-    title: 'AMG Driving Academy',
-    date: '',
+    title: 'AMG Driving academy, car racing event organizer to build a new platform to host their car racing event.',
+    date: 'March 2023',
     read: '12 min read',
     link: '/casestudies/bestornothing',
   },
   {
     img: Payuxs,
-    chipContent: 'UI Design',
-    title: 'Paysafe',
-    date: '',
+    chipContent: 'UX Design',
+    title: 'NoBroker Heuristic Evaluation to identify the existing user pain points & to improve user engagement.',
+    date: 'November 2024',
     read: '7 min read',
-    link: '/casestudies/paysafe',
+    link: '/casestudies/nobroker',
   },
   {
     img: carui,
     chipContent: 'HMI Design',
-    title: 'Instrument Cluster',
-    date: '',
+    title: 'Instrument cluster to show collection of dials behind steering wheel to give a range of info about vehicle.',
+    date: 'December 2020',
     read: '2 min read',
     link: '/casestudies/instrumentcluster',
   },
