@@ -3,9 +3,9 @@
   flex-direction: column;
   width: 100%;
   max-width: 320px;
-  height: 180px;
+  height: 320px;
   padding: 0px 0px 12px 0px;
-  border-bottom: 1px solid #ebeceb;
+  /* border-bottom: 1px solid #ebeceb; */
   box-sizing: border-box;
 }
 
@@ -61,6 +61,7 @@
   margin-top: auto;
   padding-top: 12px;
   font-size: 14px;
+  border-top: 1px solid #e4e2e2;
 }
 
 .comp-footer-link {
