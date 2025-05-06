@@ -693,7 +693,7 @@ const CaseStudyDetails: React.FC = () => {
 
   useEffect(() => {
     if (meta?.lock && !isUnlocked) {
-      navigate(`/passcode/casestudies/${id}`);
+      navigate(`/passcode?redirect=/casestudies/${id}`);
     } else {
       setIsAuthorized(true);
     }
