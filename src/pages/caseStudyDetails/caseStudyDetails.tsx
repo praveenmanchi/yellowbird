@@ -10,6 +10,21 @@ import figma from '../../assets/caseStudiesDetails/figma-1.svg.svg';
 import xd from '../../assets/caseStudiesDetails/adobe-xd-2.svg.svg';
 import sketch from '../../assets/caseStudiesDetails/sketch-2.svg.svg';
 import invision from '../../assets/caseStudiesDetails/invision.svg.svg';
+import excel from '../../assets/caseStudiesDetails/excel-4.svg';
+import Miro from '../../assets/caseStudiesDetails/miro-2.svg';
+import Perplexity from '../../assets/caseStudiesDetails/perplexity.svg';
+
+
+import abbmainbanner from '../../assets/caseStudyImages/abb/mainbanner.png';
+import abb1 from '../../assets/caseStudyImages/abb/1.png';
+import abb2 from '../../assets/caseStudyImages/abb/2.png';
+import abb3 from '../../assets/caseStudyImages/abb/3.png';
+import abb4 from '../../assets/caseStudyImages/abb/4.png';
+import abb5 from '../../assets/caseStudyImages/abb/5.png';
+import abb6 from '../../assets/caseStudyImages/abb/6.png';
+import abb7 from '../../assets/caseStudyImages/abb/7.png';
+import abb8 from '../../assets/caseStudyImages/abb/8.png';
+
 
 import benzImg1 from '../../assets/caseStudyImages/benz/1.png';
 import benzImg2 from '../../assets/caseStudyImages/benz/2.png';
@@ -347,6 +362,79 @@ const caseStudies = {
   ],
 
 
+  abb: [
+    {
+      template: 'image',
+      imgSrc: abbmainbanner,
+    },
+    {
+      template: 'content',
+      title: 'Asset Integrity and Performance Management',
+      description:
+        'ABC Limited provides industrial analytics tools for monitoring asset health and performance. To serve industrial professionals by improving usability, visual hierarchy, and data accessibility.',
+      category: 'Web App',
+      client: 'NDA',
+      tools: ['figma', 'excel', 'Miro', 'Perplexity',],
+      published: '01-04-2025',
+    },
+    {
+      template: 'image',
+      imgSrc: abb1,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://miro.com/app/live-embed/uXjVI9HjP6I=/?moveToViewport=640,-25,5761,3483&embedId=503841419014',
+    },
+    {
+      template: 'image',
+      imgSrc: abb2,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://miro.com/app/live-embed/uXjVI9HjP6I=/?moveToViewport=636,3514,5959,7296&embedId=228953122796',
+    },
+    {
+      template: 'image',
+      imgSrc: abb3,
+    },
+    {
+      template: 'image',
+      imgSrc: abb4,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://embed.figma.com/design/MPwYInc0IZMLr8ryZ23RUP/ABB---Business-Intelligence--BI--Public?node-id=1-17036&embed-host=share',
+    },
+    {
+      template: 'image',
+      imgSrc: abb5,
+    },
+    {
+      template: 'image',
+      imgSrc: abb6,
+    },
+
+   
+
+    {
+      template: 'image',
+      imgSrc: abb7,
+    },
+    {
+      template: 'iframe',
+      srcUrl:
+        'https://embed.figma.com/proto/MPwYInc0IZMLr8ryZ23RUP/ABB---Business-Intelligence--BI--Public?page-id=1%3A652&node-id=1-4730&viewport=295%2C225%2C0.07&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A4730&embed-host=share',
+    },
+    {
+      template: 'image',
+      imgSrc: abb8,
+    },
+  ],
+
+
 
   
   paysafe: [
@@ -594,26 +682,36 @@ const caseStudies = {
 
 const CaseStudyDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-const navigate = useNavigate();
-const [isAuthorized, setIsAuthorized] = useState(false);
+  const navigate = useNavigate();
+  const [isAuthorized, setIsAuthorized] = useState(false);
 
-const caseStudy = id ? caseStudies[id as keyof typeof caseStudies] : null;
-const meta = caseStudyCardDataDummy.find((cs) => cs.pathName === id);
+  const caseStudy = id ? caseStudies[id as keyof typeof caseStudies] : null;
+  const meta = caseStudyCardDataDummy.find((cs) => cs.pathName === id);
 
-const unlockKey = `unlocked-/casestudies/${id}`;
-const isUnlocked = sessionStorage.getItem(unlockKey) === 'true';
+  const unlockKey = `unlocked-/casestudies/${id}`;
+  const isUnlocked = sessionStorage.getItem(unlockKey) === 'true';
 
-useEffect(() => {
-  if (meta?.lock && !isUnlocked) {
-    navigate(`/passcode?redirect=/casestudies/${id}`);
-  } else {
-    setIsAuthorized(true);
-  }
-}, [meta, isUnlocked, id, navigate]);
+  useEffect(() => {
+    if (meta?.lock && !isUnlocked) {
+      navigate(`/passcode/casestudies/${id}`);
+    } else {
+      setIsAuthorized(true);
+    }
+  }, [meta, isUnlocked, id, navigate]);
 
-if (!caseStudy) return <h2>Case Study Not Found</h2>;
-if (!isAuthorized) return <div>Loading protected content...</div>;
+  if (!caseStudy) return <h2>Case Study Not Found</h2>;
+  if (!isAuthorized) return <div>Loading protected content...</div>;
 
+  // 🔁 Map tool names to their imported icons
+  const toolIcons: { [key: string]: string } = {
+    figma,
+    xd,
+    sketch,
+    invision,
+    excel,
+    Miro,
+    Perplexity,
+  };
 
   return (
     <div className='case-study-details-container'>
@@ -643,10 +741,14 @@ if (!isAuthorized) return <div>Loading protected content...</div>;
               <div className='case-study-details-footer'>
                 <div className='footer-section-desc'>{eachSec.description}</div>
                 <div className='footer-section-desc-icons'>
-                  <img src={figma} alt='' className='desc-icon' />
-                  <img src={xd} alt='' className='desc-icon' />
-                  <img src={sketch} alt='' className='desc-icon' />
-                  <img src={invision} alt='' className='desc-icon' />
+                  {eachSec.tools?.map((tool, i) => (
+                    <img
+                      key={i}
+                      src={toolIcons[tool]}
+                      alt={tool}
+                      className='desc-icon'
+                    />
+                  ))}
                 </div>
               </div>
             </div>

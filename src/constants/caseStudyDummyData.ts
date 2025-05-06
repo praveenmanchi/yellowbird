@@ -8,6 +8,7 @@ import lms from '../assets/dataimages/Learning management system.png';
 import flight from '../assets/dataimages/Inflight Entertainment System.png';
 import MRO from '../assets/dataimages/MRO.png'
 import ATC from '../assets/dataimages/ATC.png'
+import abb1 from '../assets/caseStudyImages/abb/banner.png'
 
 export const caseStudyCardDataDummy = [
   {
@@ -58,6 +59,22 @@ export const caseStudyCardDataDummy = [
           imgSrc: paysafe,
 
           pathName: 'paysafe',
+        },
+        {
+          insight: false,
+          insight1: false,
+          insight1Desc: false,
+          insight2: false,
+          insight2Desc: false,
+          title: 'Asset Integrity and Performance Management',
+          description:
+            'ABC Limited provides industrial analytics tools for monitoring asset health and performance. To serve industrial professionals by improving usability, visual hierarchy, and data accessibility.',
+          position: 'Project Work',
+          client: 'NDA',
+          tools: '8 min',
+          imgSrc: abb1,
+          pathName: 'abb',
+          lock: true,
         },
         {
           insight: false,
