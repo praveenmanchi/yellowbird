@@ -1,7 +1,5 @@
-console.log('🔁 redirect param:', new URLSearchParams(location.search).get('redirect'));
-
 import { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import eye from '../../assets/nda/eye.svg';
 import unlock from '../../assets/nda/unlock.svg';
 import returnIcon from '../../assets/nda/return.svg';
@@ -9,22 +7,19 @@ import './Passcode.css';
 
 const Passcode = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+  const { slug } = useParams<{ slug: string }>();
 
   const [passcode, setPasscode] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
 
   const correctPasscode = import.meta.env.VITE_PASSCODE;
-
-  const redirectTo = new URLSearchParams(location.search).get('redirect');
-  const safeRedirect = redirectTo?.startsWith('/casestudies/')
-    ? redirectTo
-    : '/';
+  const safeRedirect = `/casestudies/${slug}`;
+  const unlockKey = `unlocked-${safeRedirect}`;
 
   const handleUnlock = () => {
     if (passcode === correctPasscode) {
-      sessionStorage.setItem(`unlocked-${safeRedirect}`, 'true');
+      sessionStorage.setItem(unlockKey, 'true');
       setError('');
       navigate(safeRedirect);
     } else {

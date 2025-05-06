@@ -683,23 +683,45 @@ const CaseStudyDetails: React.FC = () => {
   const [isAuthorized, setIsAuthorized] = useState(false);
 
   const caseStudy = id ? caseStudies[id as keyof typeof caseStudies] : null;
-  const meta = caseStudyCardDataDummy.find((cs) => cs.pathName === id);
+
+  // 🔁 Flatten all nested entries from caseStudyCardDataDummy
+  const flattenCaseStudies = () => {
+    const allEntries: any[] = [];
+
+    caseStudyCardDataDummy.forEach((category) => {
+      const values = Object.values(category);
+      values.forEach((section: any) => {
+        ['caseStudyLg', 'caseStudySm', 'caseStudyXs'].forEach((size) => {
+          if (section[size]) {
+            allEntries.push(...section[size]);
+          }
+        });
+      });
+    });
+
+    return allEntries;
+  };
+
+  const flatCaseStudies = flattenCaseStudies();
+  const meta = flatCaseStudies.find((cs) => cs.pathName === id);
 
   const unlockKey = `unlocked-/casestudies/${id}`;
   const isUnlocked = sessionStorage.getItem(unlockKey) === 'true';
 
   useEffect(() => {
-    if (meta?.lock && !isUnlocked) {
-      navigate(`/passcode?redirect=/casestudies/${id}`);
+    if (!meta) return;
+
+    if (meta.lock && !isUnlocked) {
+      navigate(`/unlock/${id}`, { replace: true });
     } else {
       setIsAuthorized(true);
     }
   }, [meta, isUnlocked, id, navigate]);
 
+  if (!meta) return <h2>Case Study Not Found</h2>;
   if (!caseStudy) return <h2>Case Study Not Found</h2>;
-  if (!isAuthorized) return <div>Loading protected content...</div>;
+  if (!isAuthorized) return <div>Checking access...</div>;
 
-  // 🔁 Map tool names to their imported icons
   const toolIcons: { [key: string]: string } = {
     figma,
     xd,

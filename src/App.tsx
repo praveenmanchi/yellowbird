@@ -17,6 +17,7 @@ import Photography from './pages/Photography/Photography';
 import NdaCaseStudy from './pages/NdaCaseStudy/NdaCaseStudy';
 import Passcode from './pages/Passcode/Passcode';
 import NotFound from './pages/NotFound/NotFound';
+import LegacyRedirect from './pages/LegacyRedirect/LegacyRedirect';
 import MobileWarning from './components/MobileWarning/MobileWarning'; // import MobileWarning
 
 const App: React.FC = () => {
@@ -42,7 +43,7 @@ const App: React.FC = () => {
   }
 
   const hideHeaderFooter =
-    location.pathname === '/ndacasestudies' || location.pathname === '/passcode';
+  location.pathname === '/ndacasestudies' || location.pathname.startsWith('/unlock');
 
   return (
     <div style={{ margin: '0' }}>
@@ -58,12 +59,14 @@ const App: React.FC = () => {
           <Route path='/designprocess' element={<MyDesignProcess />} />
           <Route path='/photography' element={<Photography />} />
           <Route path='/ndacasestudies' element={<NdaCaseStudy />} />
-          <Route path='/passcode' element={<Passcode />} />
+          <Route path='/unlock/:slug' element={<Passcode />} />
           <Route path='/design-systems' element={<CaseStudies />} />
           <Route path='/product-design' element={<CaseStudies />} />
           <Route path='/ux-research' element={<CaseStudies />} />
           <Route path='/casestudies/:id' element={<CaseStudyDetails />} />
+          <Route path='/passcode' element={<LegacyRedirect />} /> {/* handles old links */}
           <Route path='*' element={<NotFound />} />
+          
         </Routes>
       </PageTransition>
       {!hideHeaderFooter && <Footer />}
