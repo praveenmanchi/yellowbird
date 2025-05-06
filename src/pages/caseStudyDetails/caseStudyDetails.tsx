@@ -384,7 +384,7 @@ const caseStudies = {
     {
       template: 'iframe',
       srcUrl:
-        'https://miro.com/app/live-embed/uXjVI9HjP6I=/?moveToViewport=640,-25,5761,3483&embedId=503841419014',
+        'https://miro.com/app/live-embed/uXjVI9HjP6I=/?moveToViewport=582,-348,5960,4045&embedId=898143134798',
     },
     {
       template: 'image',
@@ -393,7 +393,7 @@ const caseStudies = {
     {
       template: 'iframe',
       srcUrl:
-        'https://miro.com/app/live-embed/uXjVI9HjP6I=/?moveToViewport=636,3514,5959,7296&embedId=228953122796',
+        'https://miro.com/app/live-embed/uXjVI5wKWV0=/?moveToViewport=-4143,-6241,7715,7236&embedId=347291427977',
     },
     {
       template: 'image',
@@ -416,9 +416,6 @@ const caseStudies = {
       template: 'image',
       imgSrc: abb6,
     },
-
-   
-
     {
       template: 'image',
       imgSrc: abb7,
