@@ -406,7 +406,7 @@ const caseStudies = {
     {
       template: 'iframe',
       srcUrl:
-        'https://embed.figma.com/design/MPwYInc0IZMLr8ryZ23RUP/ABB---Business-Intelligence--BI--Public?node-id=1-17036&embed-host=share',
+        'https://embed.figma.com/design/MPwYInc0IZMLr8ryZ23RUP/ABB---Business-Intelligence--BI--Public?node-id=1-652&embed-host=share',
     },
     {
       template: 'image',
