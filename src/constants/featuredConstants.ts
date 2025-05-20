@@ -12,11 +12,11 @@ export const featuresProjectCardsData = {
       insight1Desc: false,
       insight2: false,
       insight2Desc: false,
-      title: 'AMG Driving academy',
+      title: 'Benz AMG Car Racing',
       description:
-        'AMG Driving academy, a car racing event organizer is planning to build a new platform to host their upcoming car racing event.',
+        'AMG Driving Academy, Need build a new platform so they can host their next AMG car racing event and provide training on their sports and luxury vehicles.',
       position: 'Assignment',
-      client: 'Benz',
+      client: 'Mercedes Benz R&D',
       tools: ['figma', 'miro',],
       imgSrc: benzbanner,
       // link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
@@ -30,7 +30,7 @@ export const featuresProjectCardsData = {
       insight2Desc: false,
       title: 'NoBroker Heuristic Evaluation',
       description:
-        'Create a seamless and user-friendly a new user experience to occupy a new flat, house or any property.',
+        'Analyze NoBrokers current user experience to identify any issues and create a smooth, easy-to-use experience for moving into a new apartment, home, or other property.',
       position: 'Assignment',
       client: 'NDA',
       tools: ['figma', 'miro',],
@@ -46,7 +46,7 @@ export const featuresProjectCardsData = {
       insight2Desc: false,
       title: 'Cisco foods - Food Delivery Website for the senior citizens',
       description:
-        'A thoughtfully designed food delivery website tailored to the unique needs and preferences of senior citizens With accessibility.',
+        'To design a completely accessibility friendly food delivery website that is suited to the particular requirements and tastes of elderly adults',
       position: 'Assignment',
       client: 'Cisco',
       tools: ['figma', 'miro',],

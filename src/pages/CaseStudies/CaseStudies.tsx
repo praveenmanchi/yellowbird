@@ -108,9 +108,7 @@ const CaseStudies: React.FC = () => {
       </div>
       <div className='case-studies-intro'>
         <span className='case-studies-intro-text'>
-          Looking for my portfolio? You’ll find here some shots of my most
-          recent projects, an exhaustive list of all the projects I contributed
-          to, as well as a few words about my role and my inspirations.
+        Are you trying to find my skills?  Here are some case-studies of my most recent work, a comprehensive list of all the projects I worked on, and a brief description of my process, skills and thrid process.
         </span>
       </div>
       <div className='case-studies-design-process'>

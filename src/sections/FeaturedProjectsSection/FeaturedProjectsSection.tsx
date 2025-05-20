@@ -26,7 +26,7 @@ const FeaturedProjectsSection: React.FC = () => {
 
   return (
     <div className='featured-projects-section'>
-      <h2 className='featured-projects-heading'>Featured Projects</h2>
+      <h2 className='featured-projects-heading'>Featured Case-Studies</h2>
       <p className='featured-projects-description'>
         This personal space aims to showcase how I think and work and solve a
         problems with my thoughts and my process to dlivery the top-noch

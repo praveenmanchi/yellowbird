@@ -93,7 +93,7 @@ const caseStudies = {
         'AMG Driving academy, a car racing event organizer is planning to build a new platform to host their upcoming car racing event. The platform aims to provide a comprehensive solution for the participants, spectators, and event organizers to engage with each other before, during, and after the event. AMG Driving academy, a car racing event organizer is planning to build a new platform to host their upcoming car racing event. The platform aims to provide a comprehensive solution for the participants, spectators, and event organizers to engage with each other before, during, and after the event.',
       category: 'Web App',
       client: 'Benz',
-      tools: [figma, xd, sketch, invision],
+      tools: ['figma', 'Miro',],
       published: '01-04-2025',
     },
     {
@@ -168,7 +168,7 @@ const caseStudies = {
         'Create a seamless and user-friendly a new user experience to occupy a new flat, house or any property and also a brokerage-free proptech company that provides all sorts of real estate services under marketplace, which includes buying, renting, packers & movers, and home services Re-designing a new user experience to occupy a new flat, house or any property at https://www.nobroker.in/ (Personal Casestudy, not affiliated with any company)',
       category: 'Web App',
       client: 'NDA',
-      tools: [figma, invision],
+      tools: ['figma', 'Miro',],
       published: '01-04-2025',
     },
     {
@@ -237,7 +237,7 @@ const caseStudies = {
         'Create a seamless and user-friendly a new user experience to occupy a new flat, house or any property and also a brokerage-free proptech company that provides all sorts of real estate services under marketplace, which includes buying, renting, packers & movers, and home services Re-designing a new user experience to occupy a new flat, house or any property at https://www.nobroker.in/ (Personal Casestudy, not affiliated with any company)',
       category: 'Web App',
       client: 'NDA',
-      tools: [figma, invision],
+      tools: ['figma', 'Miro',],
       published: '01-04-2025',
     },
     {
@@ -306,7 +306,7 @@ const caseStudies = {
         'Aviation a seamless and user-friendly a new user experience to occupy a new flat, house or any property and also a brokerage-free proptech company that provides all sorts of real estate services under marketplace, which includes buying, renting, packers & movers, and home services Re-designing a new user experience to occupy a new flat, house or any property at https://www.nobroker.in/ (Personal Casestudy, not affiliated with any company)',
       category: 'Web App',
       client: 'NDA',
-      tools: [figma, invision],
+      tools: ['figma', 'Miro',],
       published: '01-04-2025',
     },
     {
@@ -446,7 +446,7 @@ const caseStudies = {
         'Create a seamless and user-friendly payment process for both web and mobile applications, enabling users to pay their utility bills efficiently and securely.',
       category: 'Web App',
       client: 'Paysafe',
-      tools: [figma, xd, sketch, invision],
+      tools: ['figma', 'Miro',],
       published: '01-04-2025',
     },
     {

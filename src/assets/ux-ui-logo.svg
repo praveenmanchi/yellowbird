@@ -1,17 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1345" height="240" viewBox="0 0 1345 240" fill="none">
   <defs>
     <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#37FF00">
+      <stop offset="0%" stop-color="#1A1A1A">
         <animate attributeName="offset" values="0;1;0" dur="6s" repeatCount="indefinite" />
       </stop>
-      <stop offset="50%" stop-color="#003DCC">
-        <animate attributeName="offset" values="0.5;1;0.5" dur="6s" repeatCount="indefinite" />
+      <stop offset="10%" stop-color="#003DCC">
+        <animate attributeName="offset" values="0.1;1;0.1" dur="6s" repeatCount="indefinite" />
       </stop>
-      <stop offset="75%" stop-color="#B30000">
-        <animate attributeName="offset" values="0.75;1;0.75" dur="6s" repeatCount="indefinite" />
+      <stop offset="25%" stop-color="#0B0B61">
+        <animate attributeName="offset" values="0.25;1;0.25" dur="6s" repeatCount="indefinite" />
       </stop>
-      <stop offset="87.5%" stop-color="#FFB41F">
-        <animate attributeName="offset" values="0.875;1;0.875" dur="6s" repeatCount="indefinite" />
+      <stop offset="40%" stop-color="#37FF00">
+        <animate attributeName="offset" values="0.4;1;0.4" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="55%" stop-color="#B30000">
+        <animate attributeName="offset" values="0.55;1;0.55" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="70%" stop-color="#222222">
+        <animate attributeName="offset" values="0.7;1;0.7" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="85%" stop-color="#FFB41F">
+        <animate attributeName="offset" values="0.85;1;0.85" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="95%" stop-color="#330000">
+        <animate attributeName="offset" values="0.95;1;0.95" dur="6s" repeatCount="indefinite" />
       </stop>
       <stop offset="100%" stop-color="#99008C">
         <animate attributeName="offset" values="1;0;1" dur="6s" repeatCount="indefinite" />
