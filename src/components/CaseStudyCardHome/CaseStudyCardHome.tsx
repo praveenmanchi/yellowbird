@@ -7,6 +7,10 @@ import Perplexity from '../../assets/caseStudiesDetails/perplexity.svg';
 import sketch from '../../assets/caseStudiesDetails/sketch-2.svg.svg';
 import invision from '../../assets/caseStudiesDetails/invision.svg.svg';
 import tool from '../../assets/micro-tool.svg';
+import photoshop from '../../assets/caseStudiesDetails/Photoshop.svg';
+import adobeXD from '../../assets/caseStudiesDetails/adobe-xd-2.svg.svg';
+import blender from '../../assets/caseStudiesDetails/blender.svg';
+import rihno from '../../assets/caseStudiesDetails/rihno.svg';
 import { Link } from 'react-router-dom';
 import './CaseStudyCardHome.css';
 
@@ -17,6 +21,10 @@ const toolIcons: { [key: string]: string } = {
   Perplexity,
   sketch,
   invision,
+  photoshop,
+  blender,
+  rihno,
+  adobeXD,
   default: tool,
 };
 

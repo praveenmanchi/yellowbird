@@ -21,6 +21,7 @@ export const featuresProjectCardsData = {
       imgSrc: benzbanner,
       // link: 'https://open.substack.com/pub/praveenmanchi/p/amg-driving-academy-case-study?r=4yhy4f&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false',
       pathName: 'bestornothing',
+      
     },
     {
       insight: false,

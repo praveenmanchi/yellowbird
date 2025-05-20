@@ -143,7 +143,7 @@ const Header: React.FC = () => {
                 to='#'
                 className={activeLink === '#resource' ? 'active' : ''}
               >
-                Resource
+                Contributions
               </Link>
             </li>
           </ul>

@@ -13,6 +13,9 @@ import invision from '../../assets/caseStudiesDetails/invision.svg.svg';
 import excel from '../../assets/caseStudiesDetails/excel-4.svg';
 import Miro from '../../assets/caseStudiesDetails/miro-2.svg';
 import Perplexity from '../../assets/caseStudiesDetails/perplexity.svg';
+// import photoshop from '../../assets/caseStudiesDetails/Photoshop.svg';
+// import blender from '../../assets/caseStudiesDetails/blender.svg';
+// import rihno from '../../assets/caseStudiesDetails/rihno.svg';
 
 
 import abbmainbanner from '../../assets/caseStudyImages/abb/mainbanner.png';
