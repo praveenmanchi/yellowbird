@@ -1,3 +1,33 @@
+# robots.txt for praveenmanchi.art
+
 User-agent: *
-Disallow:
-Sitemap: https://yellowbird-six.vercel.app/sitemap.xml
+Allow: /
+
+# Allow all crawlers to access case studies and portfolio content
+Allow: /casestudies/
+Allow: /aboutme
+Allow: /blog
+Allow: /contact
+Allow: /photography
+Allow: /designprocess
+
+# Block access to protected NDA content
+Disallow: /ndacasestudies
+Disallow: /unlock/
+
+# Block access to development and admin routes
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /dev/
+
+# Block common bot traps
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+
+# Crawl delay to be respectful to server resources
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.praveenmanchi.art/sitemap.xml

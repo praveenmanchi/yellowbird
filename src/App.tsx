@@ -18,7 +18,10 @@ import NdaCaseStudy from './pages/NdaCaseStudy/NdaCaseStudy';
 import Passcode from './pages/Passcode/Passcode';
 import NotFound from './pages/NotFound/NotFound';
 import LegacyRedirect from './pages/LegacyRedirect/LegacyRedirect';
-import MobileWarning from './components/MobileWarning/MobileWarning'; // import MobileWarning
+import MobileWarning from './components/MobileWarning/MobileWarning';
+
+// Import SEO utilities
+import { addStructuredData, websiteStructuredData } from './utils/seo';
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -38,12 +41,17 @@ const App: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Add default website structured data on app load
+  useEffect(() => {
+    addStructuredData(websiteStructuredData);
+  }, []);
+
   if (isMobile) {
     return <MobileWarning />;
   }
 
   const hideHeaderFooter =
-  location.pathname === '/ndacasestudies' || location.pathname.startsWith('/unlock');
+    location.pathname === '/ndacasestudies' || location.pathname.startsWith('/unlock');
 
   return (
     <div style={{ margin: '0' }}>
@@ -60,13 +68,15 @@ const App: React.FC = () => {
           <Route path='/photography' element={<Photography />} />
           <Route path='/ndacasestudies' element={<NdaCaseStudy />} />
           <Route path='/unlock/:slug' element={<Passcode />} />
+          
+          {/* Category pages - these should have unique content or redirect properly */}
           <Route path='/design-systems' element={<CaseStudies />} />
           <Route path='/product-design' element={<CaseStudies />} />
           <Route path='/ux-research' element={<CaseStudies />} />
-          <Route path='/casestudies/:id' element={<CaseStudyDetails />} />
-          <Route path='/passcode' element={<LegacyRedirect />} /> {/* handles old links */}
-          <Route path='*' element={<NotFound />} />
           
+          <Route path='/casestudies/:id' element={<CaseStudyDetails />} />
+          <Route path='/passcode' element={<LegacyRedirect />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </PageTransition>
       {!hideHeaderFooter && <Footer />}

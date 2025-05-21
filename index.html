@@ -32,27 +32,36 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
 
-  <!-- SEO -->
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="<%= description %>" />
-  <meta name="keywords" content="<%= keywords %>" />
+  <!-- SEO - Default values that will be updated by React -->
+  <meta name="description" content="Explore my portfolio showcasing innovative UX/UI design solutions in AI, IoT, and emerging technologies. View case studies, design process, and creative work." />
+  <meta name="keywords" content="UX Design, UI Design, Product Design, Web Development, AI, IoT, UX Engineer, Portfolio, Praveen Manchi" />
   <meta name="author" content="Praveen Manchi" />
 
-  <!-- OpenGraph -->
-  <meta property="og:title" content="<%= title %>" />
-  <meta property="og:description" content="<%= description %>" />
-  <meta property="og:image" content="<%= ogImage %>" />
-  <meta property="og:url" content="<%= ogUrl %>" />
+  <!-- OpenGraph - Default values -->
+  <meta property="og:title" content="Praveen Manchi - UX/UI Designer | Portfolio" />
+  <meta property="og:description" content="Explore my portfolio showcasing innovative UX/UI design solutions in AI, IoT, and emerging technologies. View case studies, design process, and creative work." />
+  <meta property="og:image" content="https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png" />
+  <meta property="og:url" content="https://www.praveenmanchi.art/" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Praveen Manchi Portfolio" />
 
-  <!-- Twitter -->
+  <!-- Twitter - Default values -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<%= title %>" />
-  <meta name="twitter:description" content="<%= description %>" />
-  <meta name="twitter:image" content="<%= ogImage %>" />
-
+  <meta name="twitter:title" content="Praveen Manchi - UX/UI Designer | Portfolio" />
+  <meta name="twitter:description" content="Explore my portfolio showcasing innovative UX/UI design solutions in AI, IoT, and emerging technologies." />
+  <meta name="twitter:image" content="https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png" />
+  <meta name="twitter:creator" content="@yourhandle" /><!-- Replace with your actual Twitter handle -->
+  
+  <!-- Additional SEO meta tags -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="geo.region" content="US" /><!-- Update with your region -->
+  <meta name="geo.placename" content="Hyderbad" /><!-- Update with your city -->
+  
+  <!-- Preload important resources -->
+  <link rel="preload" href="/fonts/Magellot.woff2" as="font" type="font/woff2" crossorigin /><!-- Update with your actual font -->
+  
   <!-- Favicon -->
-  <link rel="icon" href="<%= favicon %>" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <div id="root"></div>

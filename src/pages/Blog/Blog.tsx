@@ -3,9 +3,10 @@ import './Blog.css';
 import BlogMainCard from '../../components/BlogMainCard/BlogMainCard';
 import BlogSmCard from '../../components/BlogSmCard/BlogSmCard';
 import chipImg from '../../assets/blog/chip-img.png';
-
 import ReadBlog from '../../components/ReadBlog/ReadBlog';
 // import Chip from '../../components/Chip/Chip';
+
+import { useArticleSEO } from '../../hooks/useSEO';
 
 const blogsData = {
   mainBlogs: [
@@ -80,10 +81,11 @@ const blogsData = {
         'https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/thumbnail/9c44a4e7-57d6-4a68-b7bd-bfa05a8ea08d/landscape_newsletterbanner.png',
     chipLabel: 'UX Design',
   },
-}
-
+};
 
 const Blog: React.FC = () => {
+  useArticleSEO(undefined, blogsData.mainBlogs[0]); // Use SEO hook for article/blog
+
   return (
     <div className='blog-container'>
       <h1 className='blog-title'>Blogs</h1>
