@@ -7,6 +7,8 @@ import circle from '../../assets/circle.svg';
 import CaseStudyCardNew from '../../components/CaseStudyCardNew/CaseStudyCardNew';
 import { Link } from 'react-router';
 import { caseStudyCardDataDummy } from '../../constants/caseStudyDummyData';
+import { usePageSEO } from '../../hooks/useSEO'; 
+
 
 interface CaseStudy {
   title: string;
@@ -26,6 +28,7 @@ interface CaseStudyData {
 }
 
 const CaseStudies: React.FC = () => {
+  usePageSEO();
   const [selectedChips, setSelectedChips] = useState(['All']);
   const [activeChips, setActiveChips] = useState<string[]>(['All']);
 

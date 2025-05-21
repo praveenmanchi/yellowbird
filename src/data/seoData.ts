@@ -1,106 +1,84 @@
-// data/seoData.ts
 import { SEOData } from '../utils/seo';
 
 export const seoDataByRoute: Record<string, SEOData> = {
   '/': {
-    title: 'Praveen Manchi - UX/UI Designer | Portfolio',
-    description: 'Explore my portfolio showcasing innovative UX/UI design solutions in AI, IoT, and emerging technologies. View case studies, design process, and creative work.',
-    keywords: 'UX Design, UI Design, Product Design, Web Development, AI, IoT, UX Engineer, Portfolio, Praveen Manchi',
+    title: 'Praveen Manchi - Senior UX/UI & Product Designer | AI, HMI, IoT Specialist',
+    description: 'Explore Praveen Manchi’s portfolio: 6.8+ years designing innovative UX/UI for AI, IoT, HMI, and enterprise solutions. Case studies, design systems, and cutting-edge digital product design for top clients in technology, renewable energy, automotive, and more.',
+    keywords: 'Praveen Manchi, Senior UX Designer, UI Designer, Product Designer, AI Design, IoT UI, HMI, Machine Learning UX, Deloitte, Design Portfolio, UX Engineer, Prototyping, Usability Testing, Web & Mobile Design, OTT Design, Futuristic UI',
     ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/',
     type: 'website'
   },
   '/aboutme': {
-    title: 'About Me - Praveen Manchi | UX/UI Designer',
-    description: 'Learn about my journey as a UX/UI designer, my skills, experience, and passion for creating user-centered solutions. Discover my background and approach to design.',
-    keywords: 'About Praveen Manchi, UX Designer Background, UI Designer Experience, Design Skills, User Experience',
-    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/about-og.png',
+    title: 'About Praveen Manchi - UX/UI & Product Design Leader',
+    description: 'Discover Praveen Manchi’s journey: 6.8+ years of UX/UI expertise across AI, IoT, HMI, and enterprise platforms. Learn about his user-centered philosophy, technical skills (Figma, React, Blender), and leadership in driving user experience for Deloitte, Tata Elxsi, and more.',
+    keywords: 'Praveen Manchi bio, UX Designer Experience, Product Design Lead, User Research, AI UX, HMI Design, Creative Process, Team Collaboration, Agile UX, Praveen Manchi Background',
+    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/aboutme',
     type: 'profile'
   },
   '/casestudies': {
-    title: 'Case Studies - UX/UI Design Projects | Praveen Manchi',
-    description: 'Explore detailed case studies of my UX/UI design projects, showcasing problem-solving, design thinking processes, and real-world solutions for digital products.',
-    keywords: 'UX Case Studies, UI Design Projects, Design Process, User Research, Product Design, Design Portfolio',
-    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/casestudies-og.png',
+    title: 'UX/UI Case Studies & Product Design Projects | Praveen Manchi',
+    description: 'In-depth case studies by Praveen Manchi: Enterprise UX, AI-driven tools, ML platforms, OTT apps, and design system projects. View real-world solutions, user research, and the impact of thoughtful design on digital transformation.',
+    keywords: 'UX Case Studies, AI Design, Product Design, UI Research, Enterprise UX, OTT Platforms, User Testing, Usability, Design Thinking, Portfolio, HMI Projects',
+    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/casestudies',
     type: 'website'
   },
   '/blog': {
-    title: 'Design Blog - UX/UI Insights | Praveen Manchi',
-    description: 'Read my thoughts on UX/UI design, emerging technologies, design industry insights, and best practices. Stay updated with the latest in user experience design.',
-    keywords: 'UX Blog, Design Articles, UI Design Tips, Design Insights, Technology Blog, User Experience Writing',
-    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/blog-og.png',
+    title: 'Design Blog - UX/UI, AI, HMI Insights by Praveen Manchi',
+    description: 'Read expert insights on UX/UI design, AI in user experience, HMI trends, case study analysis, and practical tips for designers. Stay updated with best practices in research-driven design and innovation.',
+    keywords: 'UX Blog, AI UX Insights, HMI Trends, Product Design Writing, UI Tips, Design Research, User Experience, Industry Articles, Praveen Manchi Blog',
+    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/blog',
     type: 'blog'
   },
   '/contact': {
-    title: 'Contact Praveen Manchi - UX/UI Designer for Hire',
-    description: 'Get in touch with me for design projects, collaborations, consulting, or just to say hello. Available for freelance and full-time opportunities.',
-    keywords: 'Contact Praveen Manchi, Hire UX Designer, Design Collaboration, Get in Touch, UX Consultant',
-    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/contact-og.png',
+    title: 'Contact Praveen Manchi - Senior UX/UI & Product Designer',
+    description: 'Connect with Praveen Manchi for UX/UI design consulting, AI/ML interface design, product strategy, or collaborative projects. Available for freelance, consulting, and leadership opportunities in digital product design.',
+    keywords: 'Contact Praveen Manchi, Hire UX/UI Designer, Product Design Consulting, AI Design Specialist, UI/UX Freelance, Design Collaboration, UX Leadership',
+    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/contact',
     type: 'website'
   },
   '/photography': {
-    title: 'Photography Portfolio - Visual Arts | Praveen Manchi',
-    description: 'Explore my photography work and visual storytelling beyond design. Discover creative perspectives through the lens of a designer.',
-    keywords: 'Photography, Visual Arts, Creative Work, Praveen Manchi Photos, Visual Storytelling',
-    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/photography-og.png',
+    title: 'Photography & Visual Storytelling by Praveen Manchi',
+    description: 'Explore photography and visual art by Praveen Manchi. Discover the creative perspective of a designer who translates user empathy and narrative into compelling imagery.',
+    keywords: 'Photography, Visual Storytelling, UX Designer Photography, Creative Vision, Art Portfolio, Visual Communication, Praveen Manchi Photos',
+    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/photography',
     type: 'website'
   },
   '/designprocess': {
-    title: 'My Design Process - UX Methodology | Praveen Manchi',
-    description: 'Learn about my design methodology, approach to problem-solving, and creative process. Understand how I transform ideas into user-centered solutions.',
-    keywords: 'Design Process, UX Methodology, Design Thinking, User-Centered Design, Design Framework',
-    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/process-og.png',
+    title: 'Design Process & UX Methodology | Praveen Manchi',
+    description: 'Learn about Praveen Manchi’s proven UX process: User research, design thinking, prototyping, usability testing, and design system creation. Discover how research and empathy shape his design outcomes.',
+    keywords: 'Design Process, UX Methodology, Design Thinking, User Research, Prototyping, Usability Testing, Design System, Information Architecture, Praveen Manchi Approach',
+    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/designprocess',
     type: 'article'
   },
-  // Additional routes that redirect to case studies - give them unique content
   '/design-systems': {
-    title: 'Design Systems - UX/UI Projects | Praveen Manchi',
-    description: 'Explore my design system projects, component libraries, and scalable design solutions that maintain consistency across digital products.',
-    keywords: 'Design Systems, Component Library, UI Components, Design Tokens, Scalable Design',
-    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/design-systems-og.png',
+    title: 'Design Systems & UI Component Libraries | Praveen Manchi',
+    description: 'Explore robust design systems, scalable component libraries, and design tokens built by Praveen Manchi. See how consistent, efficient UX is delivered for enterprise-scale platforms and cross-functional teams.',
+    keywords: 'Design Systems, UI Component Library, Design Tokens, Scalable Design, Enterprise UX, Figma, Style Guide, System Design, Praveen Manchi',
+    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/design-systems',
     type: 'website'
   },
   '/product-design': {
-    title: 'Product Design Projects - UX/UI Solutions | Praveen Manchi',
-    description: 'Discover my product design work, from conception to launch. See how I solve complex user problems through thoughtful design solutions.',
-    keywords: 'Product Design, Digital Products, User Experience, Product Strategy, UX Solutions',
-    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/product-design-og.png',
+    title: 'Product Design Solutions & Digital Innovation | Praveen Manchi',
+    description: 'View digital product design work by Praveen Manchi: From AI & ML interfaces to IoT dashboards and OTT platforms. Discover a blend of creativity, user empathy, and technical skill delivering business impact.',
+    keywords: 'Product Design, Digital Products, AI Product Design, ML UI, IoT UX, OTT UX, User Experience, Product Strategy, Digital Transformation, Praveen Manchi',
+    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/product-design',
     type: 'website'
   },
   '/ux-research': {
-    title: 'UX Research Projects - User Experience Studies | Praveen Manchi',
-    description: 'Explore my UX research work, user studies, and data-driven design decisions that inform better user experiences.',
-    keywords: 'UX Research, User Research, Usability Testing, User Studies, Research Methods',
-    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/ux-research-og.png',
+    title: 'UX Research & Usability Testing | Praveen Manchi',
+    description: 'In-depth UX research, usability testing, heuristic evaluation, and user validation by Praveen Manchi. Discover methodologies, insights, and data-driven design decisions improving product experiences.',
+    keywords: 'UX Research, Usability Testing, User Studies, Heuristic Evaluation, User Validation, Design Insights, Data-Driven UX, Field Research, Praveen Manchi',
+    ogImage: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/home-og.png',
     ogUrl: 'https://www.praveenmanchi.art/ux-research',
     type: 'website'
   }
 };
-
-// Function to get SEO data for dynamic routes
-export const getCaseStudySEO = (caseStudyTitle: string, caseStudyDescription: string, caseStudyId: string): SEOData => ({
-  title: `${caseStudyTitle} - Case Study | Praveen Manchi`,
-  description: caseStudyDescription || `Detailed case study of ${caseStudyTitle} - exploring the design process, challenges, and solutions.`,
-  keywords: `${caseStudyTitle}, Case Study, UX Design, UI Design, Product Design, User Experience`,
-  ogImage: `https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/casestudy-${caseStudyId}-og.png`,
-  ogUrl: `https://www.praveenmanchi.art/casestudies/${caseStudyId}`,
-  type: 'article'
-});
-
-// Function to get blog post SEO data
-export const getBlogPostSEO = (postTitle: string, postDescription: string, postSlug: string): SEOData => ({
-  title: `${postTitle} | Praveen Manchi Blog`,
-  description: postDescription,
-  keywords: `${postTitle}, UX Design, UI Design, Design Blog, User Experience`,
-  ogImage: `https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/blog-${postSlug}-og.png`,
-  ogUrl: `https://www.praveenmanchi.art/blog/${postSlug}`,
-  type: 'article'
-});

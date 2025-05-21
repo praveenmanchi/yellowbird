@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './caseStudyDetails.css';
 import { caseStudyCardDataDummy } from '../../constants/caseStudyDummyData';
+import { usePageSEO } from '../../hooks/useSEO';
 
 
 import chain from '../../assets/caseStudiesDetails/chain.svg';
@@ -681,6 +682,7 @@ const caseStudies = {
 };
 
 const CaseStudyDetails: React.FC = () => {
+  usePageSEO();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [isAuthorized, setIsAuthorized] = useState(false);
